@@ -30,34 +30,7 @@ body {
 }
 .App{
     min-height : 100vh;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.MyButton{
-    cursor : pointer;
-    border: none;
-    border-radius: 5px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right : 20px;
-    
-    font-size : 10px;
-    font-family: "SF Pro Text-Semibold";
-}
-
-.MyButton_default{
-    background-color: #ececec;
-    color : blakc;
-}
-
-.MyButton_postivive{
-    background-color: #64c964;
-    color :white;
-}
-.MyButton_negative{
-    background-color: #fd575f;
-    color : white;
+   
 }
 
 header{
@@ -87,8 +60,4 @@ header  .head_btn_left{
 header  .head_btn_right{
     width : 25%;
     justify-content: end;
-}
-
-header button{
-    font-family: 'Courier New', Courier, monospace;
 }

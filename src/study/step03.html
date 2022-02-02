@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=//, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 객체 리터럴
+    let obj1 = {name:"playdata", age:6};
+    console.log(obj1.name);
+    
+    let obj2 = {};
+    obj2.name = "playdata2"
+    console.log(obj2.name);
+
+    console.log(typeof(obj1));
+    console.log(typeof(obj2));
+
+    let obj3 = new Object();
+    obj3.id = "playdata3";
+    console.log(obj3.id);
+    
+    //
+    function User(id){
+        this.id = id;
+        this.setId = function(id){
+            this.id = id;
+        }
+    
+  
+ this.getId = function(){
+     return this.id;
+ }
+} 
+
+let obj4 = new User('playdata4');
+console.log(obj4);
+console.log(obj4.getId());
+console.log(obj4['id']);
+console.log(obj4.id);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.forEach((i) => {
+    console.log(i);
+});
+
+
+</script>
+</body>
+</html>

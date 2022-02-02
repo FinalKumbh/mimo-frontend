@@ -1,4 +1,6 @@
 import {  useNavigate, useSearchParams } from "react-router-dom";
+import "./Screen.css";
+
 
 const Screen = ()=>{
 
@@ -6,18 +8,21 @@ const Screen = ()=>{
 
   
     return ( 
-    <div>
-      <button onClick={()=> {navigate("/naver");}}>
+    <div1>
+      <div2>
+      <img id="screen" src={process.env.PUBLIC_URL+`assets/image-1.png`}/>
+      </div2>
+     
+      <button type="naver" onClick={()=> {navigate("/naver");}}>
         Naver
       </button>
-      <button onClick={()=> {navigate("/kakao");}}>
+      <button type="kakao" onClick={()=> {navigate("/kakao");}}>
         Kakao
       </button>
-      <button onClick={()=> {navigate("/google");}}>
+      <button type="google" onClick={()=> {navigate("/google");}}>
         Google
       </button>
-      <img src={process.env.PUBLIC_URL+`assets/image-1.png`}/>
-    </div>
+    </div1>
     );
   };
   

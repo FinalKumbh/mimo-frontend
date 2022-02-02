@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\Users\\Playdata\\Desktop\\reacttrain"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mimo-frontend"
+	}
+}

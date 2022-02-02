@@ -1,0 +1,20 @@
+[font-awesome]
+    - https://fontawesome.com/v5.15/how-to-use/customizing-wordpress/snippets/setup-cdn-webfont
+
+    - https://cdnjs.com/libraries/font-awesome/5.15.0
+
+    - <i class="fas fa-cloud-sun"></i>
+    - <i class="fas fa-envelope"></i>
+    - <i class="fas fa-search"></i>
+
+[MDN Web Docs]
+    - https://developer.mozilla.org/ko/docs/Web/CSS/-webkit-line-clamp
+
+    - css prefix
+        -webkit- : Safari, Chrome, Android, iOs, Webkit 엔진
+        -moz- : Firefox, Mozilla 엔진
+        -ms- : Internet Explorer
+        -o- : Opera
+
+    - @media : https://developer.mozilla.org/ko/docs/Web/CSS/@media
+    - @import : https://developer.mozilla.org/ko/docs/Web/CSS/@import

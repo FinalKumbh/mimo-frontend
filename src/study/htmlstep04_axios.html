@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>step04</title>
+</head>
+<body>
+    <botton>1</botton>
+    <botton>2</botton>
+    <botton>3</botton>
+    
+    <script>
+        axios.get("https://jsonplaceholder.typicode.com/posts?userId=1")
+            .then(data => {
+                console.log(data.data);
+            })
+            .catch(error => {
+                console.log("비정상 응답", error);
+            })
+    </script>
+
+</body>
+</html>
