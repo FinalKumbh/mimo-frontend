@@ -1,12 +1,11 @@
 import "./App.css";
-import customAxios from './customAxios';
 import axios, { Axios } from 'axios'
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Bag from "./pages/Bag";
 import Screen from "./pages/Screen";
 import Naver from "./pages/Naver";
 import Google from "./pages/Google";
-import React, { useState, useEffect, useReducer } from 'react';
+
  
 import Home from "./pages/Home";
 import Mypage from "./pages/Mypage";
@@ -18,7 +17,7 @@ import Share from "./pages/Share";
 import Camera from "./pages/Camera";
 import Search from "./pages/Search";
 import Like from "./pages/Like";
- 
+import { useEffect, useReducer } from "react";
 
 const reducer = (state, action)=>{
   let newState = [];
@@ -51,18 +50,7 @@ const reducer = (state, action)=>{
 
 function App(){
   const [data,dispatch] = useReducer(reducer, []);
-  const [ip, setIp] = useState('');
-
-  function callback(data) {
-    setIp(data);
-  }
  
- useEffect(
-  () => {
-     
-    customAxios('/ip', callback);
-  }, []
-);
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL ||"";
 
@@ -70,9 +58,7 @@ function App(){
   return (
     <BrowserRouter>
     <div className="App">
-    <header className="App-header">
-        이 기기의 IP주소는 {ip}입니다.
-      </header>
+      
 
       <Routes>
     
