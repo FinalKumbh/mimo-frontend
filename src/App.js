@@ -52,17 +52,33 @@ const reducer = (state, action)=>{
 function App(){
   const [data,dispatch] = useReducer(reducer, []);
   const [ip, setIp] = useState('');
+  
+  const [ testStr, setTestStr ] = useState(''); // test
 
   function callback(data) {
     setIp(data);
+
+    setTestStr(data);
   }
  
- useEffect(
-  () => {
+//  useEffect(
+//   () => {
      
-    customAxios('/ip', callback);
+//     customAxios('/ip', callback);
+//   }, []
+// );
+
+useEffect(
+  () => {
+    axios({
+        url: '/home',
+        method: 'GET'
+    }).then((res) => {
+        callback(res.data);
+    })
   }, []
 );
+
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL ||"";
 
@@ -72,6 +88,7 @@ function App(){
     <div className="App">
     <header className="App-header">
         이 기기의 IP주소는 {ip}입니다.
+        {testStr}
       </header>
 
       <Routes>
