@@ -1,21 +1,28 @@
-const {Kakao} = window;
-const kakaoLogin = ()=>{
-    console.log("hello");
-    Kakao.Auth.authorize({
-        redirectUrl:'http://localhost:3001/oauth/kakao/callback'
-    })
-}
+ 
+<script src="http://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-const Kakao = ()=>{
-    return(
-        <div>
-            <a id="kakaobtn" onClick={kakaoLogin}>
-                <img
-                src="C:\mimo-frontend-main\public\assets\kakao_login.png"
-                />
-            </a>
-        </div>
-    );
-};
+Kakao.init('c65ef05a10b8080f80969bfb56d13033');
+Kakao.Auth.login({
+    success:  function(authObj){
 
-export default Kakao;
+        Kakao.API.request({
+            url:'v2/user/me',
+            success:function(res){
+                console.log(res);
+
+                var id = res.id;
+                var email = res.kakao_account.email;
+                var name = res.properties.nickname;
+                var html = '<BR>' + email + '<BR>' + name;
+
+                $('body').append(html);
+            }
+        })
+        console.log(authObj);
+        var token = authObj.access_token;
+
+    },
+    fail: function(err){
+        alert(JSON.stringify(err));
+    }
+});
