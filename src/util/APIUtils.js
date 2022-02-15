@@ -49,3 +49,10 @@ export function signup(signupRequest) {
         body: JSON.stringify(signupRequest)
     });
 }
+
+export function home2() {
+    return request({
+        url: API_BASE_URL + "/home2",
+        method: 'GET'
+    });
+}

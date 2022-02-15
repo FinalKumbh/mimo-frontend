@@ -12,6 +12,8 @@ class Login extends Component {
     componentDidMount() {
         // If the OAuth2 login encounters an error, the user is redirected to the /login page with an error.
         // Here we display the error and then remove the error query parameter from the location.
+        // OAuth2 로그인에 오류가 발생하면 오류와 함께 /login 페이지로 리디렉션됩니다.
+        // 여기서는 오류를 표시한 다음 위치에서 오류 쿼리 매개 변수를 제거합니다.
         if(this.props.location.state && this.props.location.state.error) {
             setTimeout(() => {
                 Alert.error(this.props.location.state.error, {
