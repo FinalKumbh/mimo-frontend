@@ -36,7 +36,7 @@ function Home(props){
             to={{
             pathname: "/main",
             state: { from: props.location }
-        }}/>;            
+        }}/>;       
     }
     return(
         <div className="home-container">

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   Route,
-  Switch
+  Switch,
+  useHistory
 } from 'react-router-dom';
 import AppHeader from '../common/AppHeader';
 import Home from '../home/Home';
@@ -56,10 +57,16 @@ class App extends Component {
     localStorage.removeItem(ACCESS_TOKEN);    //access token, 인증, 현재 사용자 없앰
     this.setState({
       authenticated: false,                   
-      currentUser: null         
+      currentUser: null 
     });
     Alert.success("You're safely logged out!");
+  //   this.props.history.replace({
+  //     pathname: this.props.location.pathname,
+  //     state: {}
+  // });
+
   }
+
 
   componentDidMount() {
     this.loadCurrentlyLoggedInUser();
