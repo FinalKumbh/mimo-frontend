@@ -8,7 +8,7 @@ import Home from '../home/Home';
 import Login from '../user/login/Login';
 import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
-import Home2 from '../home/Home2';
+import Main from '../home/Main';
 
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
@@ -80,8 +80,8 @@ class App extends Component {
           <Route exact path="/" component={Home}></Route>           
             <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Profile}  ></PrivateRoute>
-            <PrivateRoute path="/home2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Home2}></PrivateRoute>
+            <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Main}></PrivateRoute>
             <Route path="/login"
               render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
          
