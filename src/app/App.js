@@ -45,7 +45,7 @@ class App extends Component {
         authenticated: true,
         loading: false
       });
-    }).catch(() => {
+    }).catch((error) => {
       this.setState({
         loading: false
       });  
@@ -78,9 +78,10 @@ class App extends Component {
         <div className="app-body">
           <Switch>
           <Route exact path="/" component={Home}></Route>           
-            <PublicRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Profile}  ></PublicRoute>
-            <PrivateRoute restricted component={Home2} path="/home2"/>
+            <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Profile}  ></PrivateRoute>
+            <PrivateRoute path="/home2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Home2}></PrivateRoute>
             <Route path="/login"
               render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
          

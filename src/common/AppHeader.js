@@ -14,7 +14,8 @@ function AppHeader(props){
                                 { props.authenticated ? (
                                     <ul>
                                         <li>
-                                            <NavLink to="/cart">cartIMG</NavLink>
+                                            <NavLink to="/profile">Profile</NavLink>
+                                            <NavLink to="/cart">CartIMG</NavLink>
                                         </li>
                                         <li>
                                             <a onClick={props.onLogout}>Logout</a>
