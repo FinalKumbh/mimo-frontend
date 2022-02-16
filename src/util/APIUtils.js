@@ -50,6 +50,14 @@ export function signup(signupRequest) {
     });
 }
 
+export function details(detailsRequest) {
+    return request({
+        url: API_BASE_URL + "/user/details/update",
+        method: 'PUT',
+        body: JSON.stringify(detailsRequest)
+    });
+}
+
 export function home2() {
     return request({
         url: API_BASE_URL + "/home2",

@@ -34,7 +34,7 @@ function Home(props){
     if(props.authenticated) {
         return <Redirect
             to={{
-            pathname: "/main",
+            pathname: "/details",
             state: { from: props.location }
         }}/>;       
     }
