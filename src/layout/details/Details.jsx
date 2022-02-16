@@ -52,9 +52,9 @@ function DetailsForm() {;
   }
 
     function handleSubmit(event) {
-        event.preventDefault();   
-        console.log(this.state.skintype)
-
+        //event.preventDefault();   
+        //console.log(this.state.skintype)
+        
         const detailsRequest = Object.assign({}, this.state);
 
         details(detailsRequest)
@@ -66,20 +66,76 @@ function DetailsForm() {;
 
     return (
         <form onSubmit={handleSubmit}>
-          <div className="skintypebutton"> 
-            <input type="radio" name="skintype" id="skintype"
-              className="form-control" placeholder="복합성"
-              value="복합성" onChange={handleInputChange} required/>
+          <div className="skintyperow1"> 
+            <div className="skintypebutton">
+              <input type="radio" name="skintype" 
+                placeholder="복합성"
+                value="복합성" onChange={handleInputChange} required/>
+              복합성
+            </div>
+              
+            <div className="skintypebutton">
+              <input type="radio" name="skintype" 
+                placeholder="건성"
+                value="건성" onChange={handleInputChange} required/>
+                건성
+            </div>
+            <div className="skintypebutton">
+              <input type="radio" name="skintype" 
+                placeholder="지성"
+                value="지성" onChange={handleInputChange} required/>
+                지성
+            </div>
+            <div className="skintypebutton">
+              <input type="radio" name="skintype" 
+                placeholder="민감성"
+                value="민감성" onChange={handleInputChange} required/>
+                민감성
+            </div>
+            <div className="skintypebutton">
+              <input type="radio" name="skintype" 
+                placeholder="중성"
+                value="중성" onChange={handleInputChange} required/>
+                중성
+            </div>
+          </div>
 
-            <input type="radio" name="skintype" 
-              className="form-control" placeholder="건성"
-              value="건성" onChange={handleInputChange} required/>
 
-            <input type="radio" name="skintype" 
-              className="form-control" placeholder="지성"
-              value="지성" onChange={handleInputChange} required/>
-            
-            <button type="submit" className="btn btn-block btn-primary" >Sign Up</button>
+          <div className="skintyperow3"> 
+            <div className="skintonebutton">
+              <input type="radio" name="skintone" 
+                placeholder="봄웜"
+                value="봄웜" onChange={handleInputChange} required/>
+              봄웜
+            </div>
+              
+            <div className="skintonebutton">
+              <input type="radio" name="skintone" 
+                placeholder="여름쿨"
+                value="여름쿨" onChange={handleInputChange} required/>
+                여름쿨
+            </div>
+            <div className="skintonebutton">
+              <input type="radio" name="skintype" 
+                placeholder="가을웜"
+                value="가을웜" onChange={handleInputChange} required/>
+                가을웜
+            </div>
+            <div className="skintonebutton">
+              <input type="radio" name="skintype" 
+                placeholder="겨울쿨"
+                value="겨울쿨" onChange={handleInputChange} required/>
+                겨울쿨
+            </div>
+            <div className="skintonebutton">
+              <input type="radio" name="skintype" 
+                placeholder="아직 모름"
+                value="아직 모름" onChange={handleInputChange} required/>
+                아직 모름
+            </div>
+            <div className="skintypebutton">
+              <button type="submit" className="btn btn-block btn-primary" >Sign Up</button>
+            </div>
           </div>
         </form>                    
         );
