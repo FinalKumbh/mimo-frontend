@@ -2,6 +2,7 @@ import React, { Component, useEffect, useState } from 'react';
 import "./Details.css";
 import {  Redirect } from "react-router-dom";
 import { details } from '../../util/APIUtils';
+import Alert from 'react-s-alert';
 
 function Details(props) {
   if(props.authenticated) {
@@ -14,7 +15,7 @@ function Details(props) {
   return (
     <div className="App">
       <div className="logininfotxt">
-        <p> 님에 대한 고유한 스타일을 모아주세요</p>
+        <p> {props.currentUser.name}님에 대한 고유한 스타일을 모아주세요</p>
       </div> 
 
       <div className="logininfosubtxt">
@@ -61,6 +62,7 @@ function DetailsForm() {;
         .then(response => {
             this.props.history.push("/main");
         }).catch(error => {
+          Alert.error(error && error.message);
         });
     }
 
@@ -100,6 +102,9 @@ function DetailsForm() {;
             </div>
           </div>
 
+          <div className="skintypesection1"> 
+            <p> 피부톤</p>
+          </div>
 
           <div className="skintyperow3"> 
             <div className="skintonebutton">
@@ -116,25 +121,25 @@ function DetailsForm() {;
                 여름쿨
             </div>
             <div className="skintonebutton">
-              <input type="radio" name="skintype" 
+              <input type="radio" name="skintone" 
                 placeholder="가을웜"
                 value="가을웜" onChange={handleInputChange} required/>
                 가을웜
             </div>
             <div className="skintonebutton">
-              <input type="radio" name="skintype" 
+              <input type="radio" name="skintone" 
                 placeholder="겨울쿨"
                 value="겨울쿨" onChange={handleInputChange} required/>
                 겨울쿨
             </div>
             <div className="skintonebutton">
-              <input type="radio" name="skintype" 
+              <input type="radio" name="skintone" 
                 placeholder="아직 모름"
                 value="아직 모름" onChange={handleInputChange} required/>
                 아직 모름
             </div>
             <div className="skintypebutton">
-              <button type="submit" className="btn btn-block btn-primary" >Sign Up</button>
+              <button type="submit" className="btn btn-block btn-primary" >저장</button>
             </div>
           </div>
         </form>                    

@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react';
 //import {  useNavigate, useSearchParams } from "react-router-dom";
+import { Link, NavLink } from 'react-router-dom';
 import "./Home.css";
 
 function Main() {
@@ -34,6 +35,10 @@ function Main() {
 
     <div className="fourth-nav">  
     <div className="checkitem">깐부님께 가장 어울리는 립을 추천드릴께요</div>
+
+    <div>
+      <Link to="/simulate" className="app-title">시뮬레이션 해보기</Link>
+    </div>
 
       <div className="list">
           <h3>
@@ -86,6 +91,10 @@ function Main() {
           <img id="shareicon" src={process.env.PUBLIC_URL+`assets/shareicon.png`}/>
           <img id="loveicon" src={process.env.PUBLIC_URL+`assets/loveicon.png`}/>
           </div>
+        </div>
+
+        <div>
+          <Link to="/itemadd" className="app-title">상품 등록</Link>
         </div>
     </div>
   );

@@ -7,7 +7,12 @@ function AppHeader(props){
         <header className="app-header">
                 <div className="container">
                     <div className="app-branding">
-                        <Link to="/" className="app-title">MIMO</Link>
+                    { props.authenticated ? (
+                                <Link to="/main" className="app-title">MIMO</Link>
+                                ): (
+                                <Link to="/" className="app-title">MIMO</Link>
+                                )}
+                        
                     </div>
                     <div className="app-options">
                         <nav className="app-nav">
@@ -15,6 +20,8 @@ function AppHeader(props){
                                     <ul>
                                         <li>
                                             <NavLink to="/profile">Profile</NavLink>
+                                        </li>
+                                        <li>
                                             <NavLink to="/cart">CartIMG</NavLink>
                                         </li>
                                         <li>
@@ -24,8 +31,11 @@ function AppHeader(props){
                                 ): (
                                     <ul>
                                         <li>
+                                            <NavLink to="/login">Login</NavLink>
+                                            
                                         </li>
                                         <li>
+                                            <NavLink to="/signup">SignUp</NavLink>
                                         </li>
                                     </ul>
                                 )}

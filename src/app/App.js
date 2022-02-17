@@ -11,7 +11,8 @@ import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
 import Main from '../home/Main';
 import Details from '../layout/details/Details';
-
+import Simulate from '../layout/simulate/Simulate';
+import ItemAdd from '../layout/item/ItemAdd';
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
@@ -92,6 +93,10 @@ class App extends Component {
               component={Main}></PrivateRoute>
             <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Details}></PrivateRoute>
+            <PrivateRoute path="/simulate" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Simulate}></PrivateRoute>
+              <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={ItemAdd}></PrivateRoute>
             <Route path="/login"
               render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
          

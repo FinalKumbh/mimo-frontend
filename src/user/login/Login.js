@@ -31,9 +31,11 @@ class Login extends Component {
         if(this.props.authenticated) {
             return <Redirect
                 to={{
-                pathname: "/main",
+                pathname: "/details",
                 state: { from: this.props.location }
             }}/>;            
+        }else{
+            
         }
 
         return (
@@ -98,7 +100,7 @@ class LoginForm extends Component {
         .then(response => {
             localStorage.setItem(ACCESS_TOKEN, response.accessToken);
             Alert.success("You're successfully logged in!");
-            this.props.history.push("/");
+            this.props.history.push("/details");
         }).catch(error => {
             Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');
         });
