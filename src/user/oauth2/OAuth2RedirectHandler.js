@@ -16,6 +16,14 @@ function OAuth2RedirectHandler(props){
 
         if(token) {
             localStorage.setItem(ACCESS_TOKEN, token);
+
+
+            /* 여기에 app.js this.state.authenticated 값을 넣는 방법을 찾아서 작성하면 의도하신대로 detail접근가능;
+             * this.useState({      
+             *     authenticated: true
+             * });
+             */
+
             return <Redirect to={{
                 pathname: "/details",
                 state: { from: props.location }

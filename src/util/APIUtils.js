@@ -1,4 +1,5 @@
 import { API_BASE_URL, ACCESS_TOKEN } from '../constants';
+import axios from 'axios';
 
 const request = (options) => {
     const headers = new Headers({
@@ -51,11 +52,17 @@ export function signup(signupRequest) {
 }
 
 export function details(detailsRequest) {
-    return request({
-        url: API_BASE_URL + "/user/details/update",
-        method: 'PUT',
-        body: JSON.stringify(detailsRequest)
+    return axios.get( API_BASE_URL + "/home" ).then( res => {
+        console.log(res);
+        debugger
     });
+
+    //아래 부분은 기존소스용으로 참고 axios 익숙해지고 백엔드랑 통신이 완벽하게 될경우 삭제
+    // return request({
+    //     url: API_BASE_URL + "/user/details/update",
+    //     method: 'PUT',
+    //     body: JSON.stringify(detailsRequest)
+    // });
 }
 
 export function home2() {
