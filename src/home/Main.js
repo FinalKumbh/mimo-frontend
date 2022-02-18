@@ -30,73 +30,96 @@ function Main() {
           <div className="eventimagesample">
     <img id="eimage1" src={process.env.PUBLIC_URL+`assets/image/eventimage1.png` }/>
     <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/eventimage2.png` }/> 
+    
+
       </div>
     </div>
 
     <div className="fourth-nav">  
-    <div className="checkitem">깐부님께 가장 어울리는 립을 추천드릴께요</div>
+    <div className="bestitem">피부톤별 화장품 추천</div>
 
-    <div>
-      <Link to="/simulate" className="app-title">시뮬레이션 해보기</Link>
-    </div>
+    <div class="bestitemlist">
+          <div class="bestitemimagesample">
 
-      <div className="list">
-          <h3>
-          <div className="lipicon">
-              💄
-              </div>
-            {" "}
-            {아이탬제목[0]}{" "}
-            <span
-              onClick={() => {
-                아이탬보기(아이탬 + 1);
-              }}
-            >
+
+            <div class="bestimage1">
+            <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> 
+              
+                <p>제로 벨벳 틴트</p>
+                <p> #오리지널시리즈</p>
+             <hr />
+            </div>
+            <div class="bestimage2">
+            <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png` }/> 
+          
+                <p>밀크티 벨벳 틴트</p>
+                <p> #홍차컬러 #밀크</p>
+             <hr />
+            </div>
+            <div class="bestimage3">
+            <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem3.png` }/> 
              
-            </span>
-            {아이탬}
-          </h3>
-          <div className="checkimagesample">
-          <p>{posts}</p>
-          <hr />
-          <img id="checkimage1" src={process.env.PUBLIC_URL+`assets/image/checkitem1.png` }/>
-          <p>{posts}</p>
-          <hr />
-          <h3> 
-          <img id="checkimage2" src={process.env.PUBLIC_URL+`assets/image/checkitem2.png` }/> 
-          {아이탬제목[2]} </h3>
-          <p>{posts}</p>
-          <hr />
-     
-        </div>
+                <p>블러 퍼지 틴트</p>
+                <p> #무광 그라데이션</p>
+             <hr />
+            </div>
+            
+            </div>
       </div>
     </div>
-    <div className="bestitem">인기 베스트 아이템</div>
-    <div className="fifth-nav">
-          <div className="bestimagesample">
-        
-       <img id="bestimage1" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/>
-       <img id="bestimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png` }/> 
-       <img id="bestimage3" src={process.env.PUBLIC_URL+`assets/image/bestitem3.png` }/> 
-       <img id="bestimage4" src={process.env.PUBLIC_URL+`assets/image/checkitem2.png` }/>
-       <img id="bestimage5" src={process.env.PUBLIC_URL+`assets/image/checkitem3.png` }/>
-        </div>
-      </div>
-
-      <div className="sixth-nav">
-          <div className="icon">
-          <img id="homeicon" src={process.env.PUBLIC_URL+`assets/image/homeicon.png` }/>
-          <img id="searchicon" src={process.env.PUBLIC_URL+`assets/image/searchicon.png`}/>
-          <img id="cameraicon" src={process.env.PUBLIC_URL+`assets/image/cameraicon.png` }/>
-          <img id="shareicon" src={process.env.PUBLIC_URL+`assets/image/shareicon.png`}/>
-          <img id="loveicon" src={process.env.PUBLIC_URL+`assets/image/loveicon.png`}/>
+    <div class="newitem">봄이니까 설레는 신상 아이템</div>
+    <div class="fifth-nav">
+        <div class="newitemlist">
+            <div class="newitemimagesample">
+              <div class="bestimage1">
+              <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem1.png` }/> 
+              
+                  <p>쥬시 래스팅 여라</p>
+                  <p> #여라 시리즈</p>
+               <hr />
+              </div>
+              <div class="bestimage2">
+              <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem2.png` }/> 
+                 
+                  <p>제로 벨벳 틴트</p>
+                  <p> #빈티지 필터</p>
+               <hr />
+              </div>
+              <div class="bestimage3">
+              <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem3.png` }/> 
+               
+                  <p>듀이풀 워터 틴트</p>
+                  <p> #입술에 내린 단비</p>
+               <hr />
+              </div>
+               <div class="bestimage4">
+               <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem4.png` }/> 
+                 
+                  <p>쥬시 래스팅 베어</p>
+                  <p> #베어쥬시</p>
+               <hr />
+              </div>
           </div>
-        </div>
+        </div>         
+      </div>
+      
+    <footer>
+    <div class="sixth-nav">
+        <hr />
+        <div class="icon">
+        <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png` }/> 
+        <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png` }/> 
+        <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png` }/> 
+        <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/mypage.png` }/> 
 
-        <div>
-          <Link to="/itemadd" className="app-title">상품 등록</Link>
+        
         </div>
+      </div>
+    </footer>
+
+
     </div>
+
   );
 }
 
