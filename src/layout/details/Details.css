@@ -1,5 +1,4 @@
 
-
 .logininfotxt{
     position: relative;
     display: block;
@@ -7,6 +6,9 @@
     margin-right: auto;
     width: 50%;
     text-align: center;
+    margin-top: 30px;
+    font-weight: bolder;
+    font-size: 30px;
 }
 
 .logininfosubtxt{
@@ -16,20 +18,26 @@
     margin-right: auto;
     width: 50%;
     text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
 }
 
 .skintypesection1{
-   
+    font-weight: bolder;
+    font-size: 25px;
+  
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     text-align: center;
+    margin-top: 30px;
 }
 
 
 .skintyperow1{
+ 
     position: relative;
     display:flex;
     flex-direction:row;
@@ -38,7 +46,6 @@
     align-content:center;
     flex-wrap: nowrap;
     padding: 20px;
-    margin-top: 50px;
     
 }
 
@@ -51,39 +58,19 @@
     align-content:center;
     flex-wrap: nowrap;
     padding: 20px;
-    margin-top: 50px;
-
     
 }
-.skintypebutton{
-    background-color:thistle;
-    border: none;
-    color: black;
-}
 
-.skintypebutton:hover{
-    background-color:  darkseagreen; 
-    color:azure;
-}
-.skintonebutton{
-    background-color:burlywood;
-    border: none;
-    color: black;
-
-}
-.skintonebutton:hover{
-  background-color: cadetblue;
-  color:azure;
-}
 .skintypesection2{
+    font-weight: bolder;
+    font-size: 25px;
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     text-align: center;
-
-    
+    margin-top: 30px;
  
 }
 .skintyperow3{
@@ -95,7 +82,7 @@
     align-content:center;
     flex-wrap: nowrap;
     padding: 20px;
-    margin-top: 50px;
+ 
 }
 
 .skintyperow4{
@@ -107,26 +94,33 @@
     align-content:center;
     flex-wrap: nowrap;
     padding: 20px;
-    margin-top: 50px;
+ 
 }
 
 
-
-.nextbutton {
-    background-color:beige;
-    color:darkgray;
-    border:none;
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
- 
-  
-  }
-  
-
-
-  .nextbutton:hover {
+.submitButton1{
+    font-size: 20px;
+    font-weight: bolder;
     background-color: crimson;
-    color: white;
-  }
+    color: bisque;
+    height:120px;
+    width: 120px;
+   
+}
+.submitButton2{
+    font-weight: bolder;
+    font-size: 20px;
+    background-color:   bisque;   
+    color:crimson;
+    height:120px;
+    width: 120px;
+    margin-bottom: 20px;
+
+}
+
+.submitButton1:hover{
+    background-color: cadetblue;
+}
+.submitButton2:hover{
+    background-color:steelblue;
+}

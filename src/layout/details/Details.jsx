@@ -92,120 +92,37 @@ function DetailsForm() {;
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="skintyperow1">
-                <div className="skintypebutton">
-                    <input
-                        type="radio"
-                        name="skintype"
-                        placeholder="복합성"
-                        value="복합성"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    복합성
+            <div className="skintypebutton">
+            <div className="skintyperow1" > 
+                    <button type="submit" className='submitButton1' onChange={handleInputChange}   required="required" >복합성</button>
+                    <button type="submit" className='submitButton1'  onChange={handleInputChange}   required="required" >건성</button>
+                    <button type="submit" className='submitButton1'  onChange={handleInputChange}   required="required" >지성</button>
                 </div>
-
-                <div className="skintypebutton">
-                    <input
-                        type="radio"
-                        name="skintype"
-                        placeholder="건성"
-                        value="건성"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    건성
-                </div>
-                <div className="skintypebutton">
-                    <input
-                        type="radio"
-                        name="skintype"
-                        placeholder="지성"
-                        value="지성"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    지성
-                </div>
-                <div className="skintypebutton">
-                    <input
-                        type="radio"
-                        name="skintype"
-                        placeholder="민감성"
-                        value="민감성"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    민감성
-                </div>
-                <div className="skintypebutton">
-                    <input
-                        type="radio"
-                        name="skintype"
-                        placeholder="중성"
-                        value="중성"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    중성
+                <div className='skintyperow2'>
+                <button type="submit" className='submitButton1'  onChange={handleInputChange}   required="required" >민감성</button>
+                <button type="submit"  className='submitButton1' onChange={handleInputChange}   required="required" >중성</button>
                 </div>
             </div>
 
-            <div className="skintypesection1">
+            <div className="skintypesection2">
                 <p>
                     피부톤</p>
             </div>
 
-            <div className="skintyperow3">
-                <div className="skintonebutton">
-                    <input
-                        type="radio"
-                        name="skintone"
-                        placeholder="봄웜"
-                        value="봄웜"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    봄웜
+            <div className="skintonebutton" >
+                <div className="skintyperow3" > 
+                    <button type="submit" className='submitButton2'  onChange={handleInputChange}   required="required"x >봄웜</button>
+                    <button type="submit" className='submitButton2'   onChange={handleInputChange}   required="required" >여름쿨</button>
+                    <button type="submit" className='submitButton2'   onChange={handleInputChange}   required="required" >가을웜</button>
+                </div>
+                <div className='skintyperow4'>
+                <button type="submit" className='submitButton2'   onChange={handleInputChange}   required="required" >겨울쿨</button>
+                <button type="submit" className='submitButton2'   onChange={handleInputChange}   required="required" >아직모름</button>
                 </div>
 
-                <div className="skintonebutton">
-                    <input
-                        type="radio"
-                        name="skintone"
-                        placeholder="여름쿨"
-                        value="여름쿨"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    여름쿨
-                </div>
-                <div className="skintonebutton">
-                    <input
-                        type="radio"
-                        name="skintone"
-                        placeholder="가을웜"
-                        value="가을웜"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    가을웜
-                </div>
-                <div className="skintonebutton">
-                    <input
-                        type="radio"
-                        name="skintone"
-                        placeholder="겨울쿨"
-                        value="겨울쿨"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    겨울쿨
-                </div>
-                <div className="skintonebutton">
-                    <input
-                        type="radio"
-                        name="skintone"
-                        placeholder="아직 모름"
-                        value="아직 모름"
-                        onChange={handleInputChange}
-                        required="required"/>
-                    아직 모름
-                </div>
-                <div className="skintypebutton">
+            
                     <button type="submit" className="btn btn-block btn-primary">저장</button>
-                </div>
+             
             </div>
         </form>
     );
