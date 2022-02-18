@@ -54,6 +54,7 @@ export function signup(signupRequest) {
 export function details(detailsRequest) {
     return axios.get( API_BASE_URL + "/home" ).then( res => {
         console.log(res);
+
     });
 
     //아래 부분은 기존소스용으로 참고 axios 익숙해지고 백엔드랑 통신이 완벽하게 될경우 삭제
