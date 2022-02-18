@@ -2,30 +2,30 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './AppHeader.css';
 
-function AppHeader(props){
-    return(
-        <header className="app-header">
+class AppHeader extends Component {
+    render() {
+        return (
+            <header className="app-header">
                 <div className="container">
                     <div className="app-branding">
-                    { props.authenticated ? (
+                    { this.props.authenticated ? (
                                 <Link to="/main" className="app-title">MIMO</Link>
                                 ): (
                                 <Link to="/" className="app-title">MIMO</Link>
                                 )}
-                        
                     </div>
                     <div className="app-options">
                         <nav className="app-nav">
-                                { props.authenticated ? (
+                        { this.props.authenticated ? (
                                     <ul>
                                         <li>
                                             <NavLink to="/profile">Profile</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/cart">CartIMG</NavLink>
+                                            <NavLink to="/details">Details</NavLink>
                                         </li>
                                         <li>
-                                            <a onClick={props.onLogout}>Logout</a>
+                                            <a onClick={this.props.onLogout}>Logout</a>
                                         </li>
                                     </ul>
                                 ): (
@@ -43,9 +43,8 @@ function AppHeader(props){
                     </div>
                 </div>
             </header>
-    )
+        )
+    }
 }
-
- 
 
 export default AppHeader;

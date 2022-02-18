@@ -33,7 +33,7 @@ class App extends Component {
     this.state = {
       authenticated: false,
       currentUser: null,
-      loading: true
+      loading: false
     }
 
     this.loadCurrentlyLoggedInUser = this.loadCurrentlyLoggedInUser.bind(this);
@@ -44,12 +44,14 @@ class App extends Component {
     getCurrentUser()                //현재 사용자 정보 받는 곳인가?
     .then(response => {
       this.setState({               //현재 사용자 응답받고, 인증 true, loading은 뭐지?
-        currentUser: response,      
+        currentUser: response,
         authenticated: true,
         loading: false
       });
+      console.log("!!!!",this.state );
     }).catch((error) => {
       this.setState({
+        authenticated: false,
         loading: false
       });  
     });    

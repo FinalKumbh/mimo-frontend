@@ -31,11 +31,9 @@ class Login extends Component {
         if(this.props.authenticated) {
             return <Redirect
                 to={{
-                pathname: "/details",
+                pathname: "/main",
                 state: { from: this.props.location }
             }}/>;            
-        }else{
-            
         }
 
         return (
@@ -46,7 +44,7 @@ class Login extends Component {
                     <div className="or-separator">
                         <span className="or-text">OR</span>
                     </div>
-                    <LoginForm {...this.props} />
+                    {/* <LoginForm {...this.props} /> */}
                     <span className="signup-link">New user? <Link to="/signup">Sign up!</Link></span>
                 </div>
             </div>
@@ -60,71 +58,71 @@ class SocialLogin extends Component {
             <div className="social-login">
                 <a className="btn btn-block social-btn google" href={GOOGLE_AUTH_URL}>
                     <img src={googleLogo} alt="Google" /> Log in with Google</a>
-                <a className="btn btn-block social-btn facebook" href={FACEBOOK_AUTH_URL}>
+                {/* <a className="btn btn-block social-btn facebook" href={FACEBOOK_AUTH_URL}>
                     <img src={fbLogo} alt="Facebook" /> Log in with Facebook</a>
                 <a className="btn btn-block social-btn github" href={GITHUB_AUTH_URL}>
-                    <img src={githubLogo} alt="Github" /> Log in with Github</a>
+                    <img src={githubLogo} alt="Github" /> Log in with Github</a> */}
             </div>
         );
     }
 }
 
 
-class LoginForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: '',
-            password: ''
-        };
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+// class LoginForm extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             email: '',
+//             password: ''
+//         };
+//         this.handleInputChange = this.handleInputChange.bind(this);
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//     }
 
-    handleInputChange(event) {
-        const target = event.target;
-        const inputName = target.name;        
-        const inputValue = target.value;
+//     handleInputChange(event) {
+//         const target = event.target;
+//         const inputName = target.name;        
+//         const inputValue = target.value;
 
-        this.setState({
-            [inputName] : inputValue
-        });        
-    }
+//         this.setState({
+//             [inputName] : inputValue
+//         });        
+//     }
 
-    handleSubmit(event) {
-        event.preventDefault();   
+//     handleSubmit(event) {
+//         event.preventDefault();   
 
-        const loginRequest = Object.assign({}, this.state);
+//         const loginRequest = Object.assign({}, this.state);
 
-        login(loginRequest)
-        .then(response => {
-            localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-            Alert.success("You're successfully logged in!");
-            this.props.history.push("/details");
-        }).catch(error => {
-            Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');
-        });
-    }
+//         login(loginRequest)
+//         .then(response => {
+//             localStorage.setItem(ACCESS_TOKEN, response.accessToken);
+//             Alert.success("You're successfully logged in!");
+//             this.props.history.push("/main");
+//         }).catch(error => {
+//             Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');
+//         });
+//     }
     
-    render() {
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <div className="form-item">
-                    <input type="email" name="email" 
-                        className="form-control" placeholder="Email"
-                        value={this.state.email} onChange={this.handleInputChange} required/>
-                </div>
-                <div className="form-item">
-                    <input type="password" name="password" 
-                        className="form-control" placeholder="Password"
-                        value={this.state.password} onChange={this.handleInputChange} required/>
-                </div>
-                <div className="form-item">
-                    <button type="submit" className="btn btn-block btn-primary">Login</button>
-                </div>
-            </form>                    
-        );
-    }
-}
+//     render() {
+//         return (
+//             <form onSubmit={this.handleSubmit}>
+//                 <div className="form-item">
+//                     <input type="email" name="email" 
+//                         className="form-control" placeholder="Email"
+//                         value={this.state.email} onChange={this.handleInputChange} required/>
+//                 </div>
+//                 <div className="form-item">
+//                     <input type="password" name="password" 
+//                         className="form-control" placeholder="Password"
+//                         value={this.state.password} onChange={this.handleInputChange} required/>
+//                 </div>
+//                 <div className="form-item">
+//                     <button type="submit" className="btn btn-block btn-primary">Login</button>
+//                 </div>
+//             </form>                    
+//         );
+//     }
+// }
 
 export default Login
