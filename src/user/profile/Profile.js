@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Profile.css';
+import {Profilebody} from "./Profilebody";
 
 class Profile extends Component {
     constructor(props) {
@@ -11,7 +12,10 @@ class Profile extends Component {
             <div className="profile-container">
                 <div className="container">
                     <div className="profile-info">
+                    <div class="third-nav">
+                            <img className="background" src={process.env.PUBLIC_URL + `assets/image/background.png`} />
                         <div className="profile-avatar">
+                       
                             { 
                                 this.props.currentUser.imageUrl ? (
                                     <img src={this.props.currentUser.imageUrl} alt={this.props.currentUser.name}/>
@@ -22,9 +26,11 @@ class Profile extends Component {
                                 )
                             }
                         </div>
+                        </div>
                         <div className="profile-name">
                            <h2>{this.props.currentUser.name}</h2>
                            <p className="profile-email">{this.props.currentUser.email}</p>
+                            <Profilebody/>
                         </div>
                     </div>
                 </div>    

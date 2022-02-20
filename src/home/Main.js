@@ -3,6 +3,8 @@ import React, { Component, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Home.css";
 
+import { REVIEW , HOME , MYPAGE, CAMERA} from '../constants';
+
 function Main() {
   let [아이탬제목, 아이탬변경] = useState([
     "lip price",
@@ -22,6 +24,7 @@ function Main() {
    
         ▶
         </div>
+        
       <img id="mypage" src={process.env.PUBLIC_URL+`assets/image/mypage.png` }/>
       <img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/>
       </div>
@@ -107,12 +110,13 @@ function Main() {
     <div class="sixth-nav">
         <hr />
         <div class="icon">
-        <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png` }/> 
-        <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png` }/> 
-        <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png` }/> 
-        <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/mypage.png` }/> 
+        <a className="eimage2" href={HOME}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /></a>
 
-        
+         <a className="eimage2" href={REVIEW}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png`}  /></a>
+        <a className="eimage2" href={CAMERA}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png`}  /></a>
+        <a className="eimage2" href={MYPAGE}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/mypage.png`}  /></a>
+   
+       
         </div>
       </div>
     </footer>
