@@ -3,7 +3,7 @@ import React, { Component, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Home.css";
 
-import { REVIEW , HOME , MYPAGE, CAMERA} from '../constants';
+import { REVIEW , MAIN , MYPAGE, CAMERA} from '../constants';
 
 function Main() {
   let [아이탬제목, 아이탬변경] = useState([
@@ -110,7 +110,7 @@ function Main() {
     <div class="sixth-nav">
         <hr />
         <div class="icon">
-        <a className="eimage2" href={HOME}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /></a>
+        <a className="eimage2" href={MAIN}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /></a>
 
          <a className="eimage2" href={REVIEW}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png`}  /></a>
         <a className="eimage2" href={CAMERA}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png`}  /></a>
