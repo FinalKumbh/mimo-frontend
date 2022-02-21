@@ -1,6 +1,6 @@
 import React, {Component, useEffect, useState} from 'react';
 import "./Details.css";
-import {Redirect} from "react-router-dom";
+import {Redirect, NavLink} from "react-router-dom";
 import {details} from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 
@@ -120,8 +120,9 @@ function DetailsForm() {;
                 <button type="submit" className='submitButton2'   onChange={handleInputChange}   required="required" >아직모름</button>
                 </div>
 
-            
-                    <button type="submit" className="btn btn-block btn-primary">저장</button>
+                <NavLink to="/main">  <button type="submit" className="btn btn-block btn-primary">저장</button></NavLink>
+
+                  
              
             </div>
         </form>

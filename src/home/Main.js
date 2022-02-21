@@ -18,9 +18,8 @@ function Main() {
     <div className="App">
       <div className="first-nav">
      
-        
-      <img id="mypage" src={process.env.PUBLIC_URL+`assets/image/mypage.png` }/>
-      <img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/>
+  
+      <NavLink to="/cart"><img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/></NavLink>
       </div>
     <div className="event">EVENT</div>
     <div className="third-nav">

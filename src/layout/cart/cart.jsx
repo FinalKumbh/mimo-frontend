@@ -1,6 +1,6 @@
 import React, {Component, useEffect, useState} from 'react';
-import "./Details.css";
-import {Redirect} from "react-router-dom";
+
+import {Redirect,  NavLink } from "react-router-dom";
 import {details} from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 import {BUY} from '../../constants';
@@ -20,8 +20,8 @@ function Details(props) {
               <div className="first-nav">
      
         
-     <img id="mypage" src={process.env.PUBLIC_URL+`assets/image/mypage.png` }/>
-     <img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/>
+    <NavLink to="/profile"><img id="mypage" src={process.env.PUBLIC_URL+`assets/image/mypage.png` }/></NavLink>
+    <NavLink to="/cart">  <img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/></NavLink>
      </div>
    <div className="event">EVENT</div>
 
