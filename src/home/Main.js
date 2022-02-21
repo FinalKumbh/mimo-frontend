@@ -17,13 +17,7 @@ function Main() {
   return (
     <div className="App">
       <div className="first-nav">
-        <div className="second-nav">
-      ◀
-        <div className="header">MIMO</div>
-  
-   
-        ▶
-        </div>
+     
         
       <img id="mypage" src={process.env.PUBLIC_URL+`assets/image/mypage.png` }/>
       <img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/>
