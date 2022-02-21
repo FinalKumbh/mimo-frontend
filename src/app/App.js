@@ -41,9 +41,9 @@ class App extends Component {
   }
 
   loadCurrentlyLoggedInUser() {
-    getCurrentUser()                //현재 사용자 정보 받는 곳인가?
+    getCurrentUser()                
     .then(response => {
-      this.setState({               //현재 사용자 응답받고, 인증 true, loading은 뭐지?
+      this.setState({              
         currentUser: response,
         authenticated: true,
         loading: false
@@ -57,8 +57,8 @@ class App extends Component {
     });    
   }
 
-  handleLogout() {                            //로그아웃. 
-    localStorage.removeItem(ACCESS_TOKEN);    //access token, 인증, 현재 사용자 없앰
+  handleLogout() {                           
+    localStorage.removeItem(ACCESS_TOKEN);    
     this.setState({
       authenticated: false,                   
       currentUser: null 
@@ -81,7 +81,7 @@ class App extends Component {
       return <LoadingIndicator />
     }
 
-    return (                              //각 api uri에 보낼 파라미터들
+    return (                              
       <div className="app">
         <div className="app-top-box">
           <AppHeader authenticated={this.state.authenticated} onLogout={this.handleLogout} />
@@ -108,7 +108,7 @@ class App extends Component {
             <Route component={NotFound}></Route>
           </Switch>
         </div>
-        <Alert stack={{limit: 3}}             //얜 뭐지?
+        <Alert stack={{limit: 3}}             
           timeout = {3000}
           position='top-right' effect='slide' offset={65} />
       </div>

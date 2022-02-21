@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink, Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom' 
-import { REVIEW , HOME , MYPAGE, CAMERA} from '../../constants';
+import { REVIEW , MAIN , MYPAGE, CAMERA} from '../../constants';
  
 
 
@@ -27,7 +27,7 @@ export  function Profilebody() {
                             <div className="sixth-nav">
                                 <hr />
                                 <div className="icon">
-                                <a className="eimage2" href={HOME}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /></a>
+                                <a className="eimage2" href={MAIN}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /></a>
                                 <a className="eimage2" href={REVIEW}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png`}  /></a>
                                 <a className="eimage2" href={CAMERA}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png`}  /></a>
                                 <a className="eimage2" href={MYPAGE}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/mypage.png`}  /></a>

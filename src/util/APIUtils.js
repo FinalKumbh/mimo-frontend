@@ -65,9 +65,8 @@ export function details(detailsRequest) {
     // });
 }
 
-export function home2() {
-    return request({
-        url: API_BASE_URL + "/home2",
-        method: 'GET'
+export function showitem(itemRequest) {
+    return axios.get( API_BASE_URL + "/showitem" ).then( res => {
+        console.log(res);
     });
 }
