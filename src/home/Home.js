@@ -1,4 +1,4 @@
-import React, { Component,usetState } from 'react';
+import React, { Component,usetState, useEffect } from 'react';
 import './Home.css';
 import mimoMain from '../img/mimo_main.png';
 import { GOOGLE_AUTH_URL, FACEBOOK_AUTH_URL, GITHUB_AUTH_URL, ACCESS_TOKEN } from '../constants';
@@ -13,6 +13,13 @@ import Alert from 'react-s-alert';
 
 
 function Home(props){
+
+    useEffect(()=>{
+
+        if (props.authenticated){
+            props.history.push('/details')
+        }
+    },[])
     return(
         <div className="home-container">
             <div className="container">

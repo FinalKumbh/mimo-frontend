@@ -105,7 +105,17 @@
     color: bisque;
     height:120px;
     width: 120px;
+    cursor: pointer;
    
+}
+
+.submitButton1 .checked{
+    background-color: cadetblue;
+}
+
+
+.submitButton2 .checked{
+    background-color: cadetblue;
 }
 .submitButton2{
     font-weight: bolder;
@@ -115,6 +125,8 @@
     height:120px;
     width: 120px;
     margin-bottom: 20px;
+    cursor: pointer;
+
 
 }
 

@@ -24,8 +24,8 @@ function Main() {
     <div className="event">EVENT</div>
     <div className="third-nav">
           <div className="eventimagesample">
-    <img id="eimage1" src={process.env.PUBLIC_URL+`assets/image/eventimage1.png` }/>
-    <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/eventimage2.png` }/> 
+          <NavLink to="/event:1"><img id="eimage1" src={process.env.PUBLIC_URL+`assets/image/eventimage1.png` }/></NavLink>
+          <NavLink to="/event:2"><img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/eventimage2.png` }/> </NavLink>
     
 
       </div>
@@ -39,21 +39,21 @@ function Main() {
 
 
             <div class="bestimage1">
-            <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> 
+            <NavLink to="/item:1">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
               
                 <p>제로 벨벳 틴트</p>
                 <p> #오리지널시리즈</p>
              <hr />
             </div>
             <div class="bestimage2">
-            <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png` }/> 
+            <NavLink to="/item:2">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png` }/> </NavLink>
           
                 <p>밀크티 벨벳 틴트</p>
                 <p> #홍차컬러 #밀크</p>
              <hr />
             </div>
             <div class="bestimage3">
-            <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem3.png` }/> 
+            <NavLink to="/item:3">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem3.png` }/> </NavLink>
              
                 <p>블러 퍼지 틴트</p>
                 <p> #무광 그라데이션</p>
@@ -68,28 +68,28 @@ function Main() {
         <div class="newitemlist">
             <div class="newitemimagesample">
               <div class="bestimage1">
-              <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem1.png` }/> 
+              <NavLink to="/item:4"> <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem1.png` }/> </NavLink>
               
                   <p>쥬시 래스팅 여라</p>
                   <p> #여라 시리즈</p>
                <hr />
               </div>
               <div class="bestimage2">
-              <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem2.png` }/> 
+              <NavLink to="/item:4"><img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem2.png` }/> </NavLink>
                  
                   <p>제로 벨벳 틴트</p>
                   <p> #빈티지 필터</p>
                <hr />
               </div>
               <div class="bestimage3">
-              <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem3.png` }/> 
+              <NavLink to="/item:4">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem3.png` }/> </NavLink>
                
                   <p>듀이풀 워터 틴트</p>
                   <p> #입술에 내린 단비</p>
                <hr />
               </div>
                <div class="bestimage4">
-               <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem4.png` }/> 
+               <NavLink to="/item:4">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/newitem4.png` }/> </NavLink>
                  
                   <p>쥬시 래스팅 베어</p>
                   <p> #베어쥬시</p>
