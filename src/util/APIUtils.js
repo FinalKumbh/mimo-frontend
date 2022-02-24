@@ -23,6 +23,7 @@ const request = (options) => {
         })
     );
 };
+
 export function setSkin() {
     if(!localStorage.getItem(ACCESS_TOKEN)) {
         return Promise.reject("No access token set.");
@@ -80,6 +81,14 @@ export function details(detailsRequest) {
 export function home2() {
     return request({
         url: API_BASE_URL + "/home2",
+        method: 'GET'
+    });
+}
+
+
+export function cart() {
+    return request({
+        url: API_BASE_URL + "/cart",
         method: 'GET'
     });
 }

@@ -1,4 +1,7 @@
-
+.detailinfo{
+    text-align: center;
+    font-size: 20px;
+}
 .logininfotxt{
     position: relative;
     display: block;

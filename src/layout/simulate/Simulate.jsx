@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import {  Redirect } from "react-router-dom";
-import { details } from '../../util/APIUtils';
+
 import Alert from 'react-s-alert';
 import {CAMERAIMAGE, PROD} from "../../constants";
 function Simulate(props) {

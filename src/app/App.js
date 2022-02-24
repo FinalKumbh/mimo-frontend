@@ -14,7 +14,7 @@ import Details from '../layout/details/Details';
 import Simulate from '../layout/simulate/Simulate';
 import ItemAdd from '../layout/item/ItemAdd';
 import Review from '../layout/review/Review';
-import Cart from '../layout/cart/Cart';
+import Cart from '../layout/cart/Cart'
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
@@ -95,8 +95,9 @@ class App extends Component {
               component={Profile}  ></PrivateRoute>
             <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Main}></PrivateRoute>
-            <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+               <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Details}></PrivateRoute>
+         
             <PrivateRoute path="/simulate" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Simulate}></PrivateRoute>
              <PrivateRoute path="/review" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
