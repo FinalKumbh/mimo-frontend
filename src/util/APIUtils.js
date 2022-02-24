@@ -23,7 +23,7 @@ const request = (options) => {
         })
     );
 };
-export function getSkin() {
+export function setSkin() {
     if(!localStorage.getItem(ACCESS_TOKEN)) {
         return Promise.reject("No access token set.");
     }
@@ -67,6 +67,8 @@ export function details(detailsRequest) {
 
     });
 
+
+    
     //아래 부분은 기존소스용으로 참고 axios 익숙해지고 백엔드랑 통신이 완벽하게 될경우 삭제
     // return request({
     //     url: API_BASE_URL + "/user/details/update",

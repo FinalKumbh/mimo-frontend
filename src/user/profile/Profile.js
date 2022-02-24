@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import './Profile.css';
 import {Profilebody} from "./Profilebody";
+
+
 
 class Profile extends Component {
     constructor(props) {

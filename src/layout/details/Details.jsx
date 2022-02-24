@@ -1,7 +1,7 @@
 import React, {Component, useEffect, useState} from 'react';
 import "./Details.css";
 import {Redirect, NavLink} from "react-router-dom";
-import {details, getSkin} from '../../util/APIUtils';
+import {details, getSkin, setSkin} from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 
  
@@ -14,8 +14,8 @@ function Checkboxes(props) {
 }
 
 function Cart() {
-    const  [skinType, setSkinType] = useState([]);
-    const [toneType, setToneType] = useState([]);
+    const [skinType, setSkinType] = useState([]);
+    const [skinTone, setskinTone] = useState([]);
     const getClassSkinType = type =>{
         return skinType.includes(type) ? 'checked' : '';
      }
@@ -29,15 +29,15 @@ function Cart() {
     }
     
 
-    const getClassToneType = type =>{
-        return toneType.includes(type) ? 'checked' : '';
+    const getClassskinTone = type =>{
+        return skinTone.includes(type) ? 'checked' : '';
      }
 
-    const toggleToneType = type => { 
-        setToneType( 
-        toneType.includes(type)
-        ? toneType.filter(r=>r!==type)
-        : [...toneType, type]
+    const toggleskinTone = type => { 
+        setskinTone( 
+        skinTone.includes(type)
+        ? skinTone.filter(r=>r!==type)
+        : [...skinTone, type]
       )
     }
     const save = () => {
@@ -45,17 +45,24 @@ function Cart() {
         }
         console.log('save', {
             skinType,
-            toneType
+            skinTone
         })
+
+        const setSkinRequest = Object.assign({}, skinType, skinTone);
+        
+        console.log(setSkinRequest)
+        setSkin(setSkinRequest);
     }
-    const setComponent = async () => {
-        const tone = await getSkin();
-        console.log(tone)
-        setToneType(tone)
-    }
-    useEffect(() => {
-        setComponent()
-    }, [])
+
+    
+    // const setComponent = async () => {
+    //     const tone = await getSkin();
+    //     console.log(tone)
+    //     setskinTone(tone)
+    // }
+    // useEffect(() => {
+    //     setComponent()
+    // }, [])
   
   
     return( 
@@ -75,12 +82,12 @@ function Cart() {
             <div className="skintonebutton" >
                 <div className="skintyperow3" > 
                     {['봄웜','여름쿨','가을웜'].map((type,i) => (
-                        <Checkboxes key={i}  mainClass="submitButton2"  getClassType={getClassToneType} toggleType={toggleToneType} type={type} />
+                        <Checkboxes key={i}  mainClass="submitButton2"  getClassType={getClassskinTone} toggleType={toggleskinTone} type={type} />
                     ))}
                </div>
                 <div className='skintyperow4'>
-                    {['겨울쿨','아지모름'].map((type,i) => (
-                            <Checkboxes key={i}  mainClass="submitButton2"  getClassType={getClassToneType} toggleType={toggleToneType} type={type} />
+                    {['겨울쿨','아직모름'].map((type,i) => (
+                            <Checkboxes key={i}  mainClass="submitButton2"  getClassType={getClassskinTone} toggleType={toggleskinTone} type={type} />
                         ))}
                </div>
             </div>

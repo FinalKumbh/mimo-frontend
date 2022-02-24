@@ -39,7 +39,7 @@ function Main() {
 
 
             <div class="bestimage1">
-            <NavLink to="/itemadd">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
+            <NavLink to="/item">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
               
                 <p>제로 벨벳 틴트</p>
                 <p> #오리지널시리즈</p>
@@ -103,13 +103,11 @@ function Main() {
     <div class="sixth-nav">
         <hr />
         <div class="icon">
-        <a className="eimage2" href={HOME}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /></a>
-
-         <a className="eimage2" href={REVIEW}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png`}  /></a>
-        <a className="eimage2" href={CAMERA}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png`}  /></a>
-        <a className="eimage2" href={MYPAGE}>  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/mypage.png`}  /></a>
-   
-       
+        <NavLink to="/main">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /> </NavLink>
+        <NavLink to="/simulate">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png`}  /> </NavLink>
+        <NavLink to="/review">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png`}  /> </NavLink>
+        <NavLink to="/profile">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/mypage.png`}  /> </NavLink>
+ 
         </div>
       </div>
     </footer>

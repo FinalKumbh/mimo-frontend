@@ -9,7 +9,7 @@ export const REVIEW = API_BASE_URL + '/review'
 
 export const HOME = 'http://localhost:3000/home'
 export const MYPAGE =  'http://localhost:3000/mypage'
-export const CAMERA = 'http://localhost:3000/camera'
+export const CAMERA = 'http://localhost:3000/simulate'
 
 // export const FACEBOOK_AUTH_URL = API_BASE_URL + '/oauth2/authorize/facebook?redirect_uri=' + OAUTH2_REDIRECT_URI;
 // export const GITHUB_AUTH_URL = API_BASE_URL + '/oauth2/authorize/github?redirect_uri=' + OAUTH2_REDIRECT_URI;

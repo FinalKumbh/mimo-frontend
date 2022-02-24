@@ -13,6 +13,8 @@ import Main from '../home/Main';
 import Details from '../layout/details/Details';
 import Simulate from '../layout/simulate/Simulate';
 import ItemAdd from '../layout/item/ItemAdd';
+import Review from '../layout/review/Review';
+import Cart from '../layout/cart/Cart';
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
@@ -97,8 +99,12 @@ class App extends Component {
               component={Details}></PrivateRoute>
             <PrivateRoute path="/simulate" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Simulate}></PrivateRoute>
+             <PrivateRoute path="/review" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Review}></PrivateRoute>
               <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={ItemAdd}></PrivateRoute>
+                <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Cart}></PrivateRoute>
             <Route path="/login"
               render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
          
