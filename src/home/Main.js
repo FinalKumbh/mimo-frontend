@@ -39,7 +39,7 @@ function Main() {
 
 
             <div class="bestimage1">
-            <NavLink to="/item:1">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
+            <NavLink to="/itemadd">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
               
                 <p>제로 벨벳 틴트</p>
                 <p> #오리지널시리즈</p>
