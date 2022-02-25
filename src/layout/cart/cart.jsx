@@ -1,11 +1,11 @@
 import React, {Component, useEffect, useState} from 'react';
 
 import {Redirect,  NavLink } from "react-router-dom";
-import {details} from '../../util/APIUtils';
+import {cart} from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 import {BUY} from '../../constants';
 
-function Details(props) {
+function Cart(props) {
     if (props.authenticated) {
         return <Redirect
             to={{
@@ -35,13 +35,13 @@ function Details(props) {
                    아이탬 구매 항목
                 </p>
             </div>
-            <DetailsForm {...props}/>
+            <CartForm {...props}/>
         </div>
 
     );
 }
 
-function DetailsForm() {;
+function CartForm() {;
     return (
         <div> 
         <div className="skintypebutton">
@@ -64,4 +64,4 @@ function DetailsForm() {;
     );
 }
 
-export default Details;
+export default Cart;

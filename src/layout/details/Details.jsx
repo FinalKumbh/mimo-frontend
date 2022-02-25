@@ -13,15 +13,7 @@ function Checkboxes(props) {
     )
 }
 
-function Details(props) {
-    if(props.authenticated) {
-        return <Redirect
-            to={{
-            pathname: "/main",
-            state: { from: this.props.location }
-        }}/>;            
-      }
-
+function Details() {
     const [skinType, setSkinType] = useState([]);
     const [skinTone, setskinTone] = useState([]);
     const getClassSkinType = type =>{
@@ -48,7 +40,7 @@ function Details(props) {
         : [...skinTone, type]
       )
     }
-    const save = (this.props.currentUser); => {
+    const save = () => {
         if (skinType.length === 0) {
         }
         console.log('save', {
@@ -76,7 +68,6 @@ function Details(props) {
   
     return( 
         <div>
-            <p className="detailinfo"> {props.currentUser.name}님 피부타입을 알려주세요</p>
             <div className="skintypebutton">
                 <div className="skintyperow1" > 
                 {['복합성','건성','지성'].map((type,i) => (

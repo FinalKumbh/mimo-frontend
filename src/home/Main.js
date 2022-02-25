@@ -21,7 +21,7 @@ function Main() {
   
       <NavLink to="/cart"><img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/></NavLink>
       </div>
-    <div className="event">EVENT</div>
+   
     <div className="third-nav">
           <div className="eventimagesample">
           <NavLink to="/event:1"><img id="eimage1" src={process.env.PUBLIC_URL+`assets/image/eventimage1.png` }/></NavLink>
@@ -39,14 +39,14 @@ function Main() {
 
 
             <div class="bestimage1">
-            <NavLink to="/item">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
+            <NavLink to="/product">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
               
                 <p>제로 벨벳 틴트</p>
                 <p> #오리지널시리즈</p>
              <hr />
             </div>
             <div class="bestimage2">
-            <NavLink to="/item:2">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png` }/> </NavLink>
+            <NavLink to="/product">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png` }/> </NavLink>
           
                 <p>밀크티 벨벳 틴트</p>
                 <p> #홍차컬러 #밀크</p>

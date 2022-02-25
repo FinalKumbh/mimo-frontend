@@ -4,6 +4,10 @@ import {
   Switch,
   useHistory
 } from 'react-router-dom';
+import { useMediaQuery } from "react-responsive"
+import Media from 'react-media';
+
+
 import AppHeader from '../common/AppHeader';
 import Home from '../home/Home';
 import Login from '../user/login/Login';
@@ -15,6 +19,7 @@ import Simulate from '../layout/simulate/Simulate';
 import ItemAdd from '../layout/item/ItemAdd';
 import Review from '../layout/review/Review';
 import Cart from '../layout/cart/Cart'
+import Product from '../layout/item/product'
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
@@ -30,6 +35,9 @@ import './App.css';
 import PublicRoute from '../common/PublicRoute.js'
 
 class App extends Component {
+
+ 
+
   constructor(props) {
     super(props);
     this.state = {
@@ -37,10 +45,19 @@ class App extends Component {
       currentUser: null,
       loading: false
     }
+    const MEDIA_QUERIES = {
+      mobile: '(max-width:800px',
+    }
 
+    const Mobilemode = (props, context) => (
+      <div id="middle" className='styles.middleback'>
+        
+      </div>
+    )
     this.loadCurrentlyLoggedInUser = this.loadCurrentlyLoggedInUser.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
+  
 
   loadCurrentlyLoggedInUser() {
     getCurrentUser()                //현재 사용자 정보 받는 곳인가?
@@ -79,12 +96,15 @@ class App extends Component {
   }
 
   render() {
+
     if(this.state.loading) {
       return <LoadingIndicator />
+      
     }
 
     return (                              //각 api uri에 보낼 파라미터들
-      <div className="app">
+      <div className="app" >
+   
         <div className="app-top-box">
           <AppHeader authenticated={this.state.authenticated} onLogout={this.handleLogout} />
         </div>
@@ -104,6 +124,8 @@ class App extends Component {
               component={Review}></PrivateRoute>
               <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={ItemAdd}></PrivateRoute>
+               <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product}></PrivateRoute>
                 <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Cart}></PrivateRoute>
             <Route path="/login"

@@ -1,0 +1,106 @@
+.review_title {
+    width: 30px;
+    height: 22px;
+    margin: 5px 92px 11px 42px;
+    font-family: NotoSans;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.33px;
+    text-align: center;
+    color: #000;
+  }
+.review_user1 {
+    width: 38.3px;
+    height: 38px;
+    margin: 10px 9.7px 14px 16px;
+    border-radius: 19px;
+}
+.review_user1_name {
+    width: 60px;
+    height: 38px;
+    margin: -55px 9.7px 14px 68px;
+    border-radius: 19px;
+}
+.review_user1_prod {
+    width: 343px;
+    height: 343px;
+}
+.review_contents1{
+    width: 342px;
+    height: 42px;
+    margin: 14px 17px 0 2px;
+    font-family: NotoSansCJKKR;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.33px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.review_user1_count {
+    width: 20px;
+    height: 20px;
+    margin-left: 300px;
+    font-family: NotoSansCJKKR;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.33px;
+    text-align: center;
+    color: #a80f0f;
+  }
+  .review_user2 {
+    width: 38.3px;
+    height: 38px;
+    margin: 10px 9.7px 14px 16px;
+    border-radius: 19px;
+}
+.review_user2_name {
+    width: 60px;
+    height: 38px;
+    margin: -55px 9.7px 14px 68px;
+    border-radius: 19px;
+}
+
+.review_contents2{
+    width: 342px;
+    height: 42px;
+    margin: 14px 17px 0 2px;
+    font-family: NotoSansCJKKR;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.33px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.7);
+}
+.akar-iconsheart {
+    width: 24px;
+    height: 24px;
+    margin: 4px 22px -22px 269px;
+    padding: 3px 2px 3.2px;
+}
+.review_user2_count {
+    width: 20px;
+    height: 20px;
+    margin-left: 300px;
+    font-family: NotoSansCJKKR;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.33px;
+    text-align: center;
+    color: #a80f0f;
+  }

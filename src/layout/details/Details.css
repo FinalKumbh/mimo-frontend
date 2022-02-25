@@ -112,12 +112,12 @@
    
 }
 
-.submitButton1 .checked{
+.submitButton1.checked{
     background-color: cadetblue;
 }
 
 
-.submitButton2 .checked{
+.submitButton2.checked{
     background-color: cadetblue;
 }
 .submitButton2{

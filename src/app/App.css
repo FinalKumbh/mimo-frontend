@@ -1,3 +1,15 @@
+#root{
+    width:800px;
+}
+.app{
+
+    width:800px;
+
+}
+
+.app-body{
+    width:800px;
+}
 .s-alert-box {
     min-width: 250px;
 }

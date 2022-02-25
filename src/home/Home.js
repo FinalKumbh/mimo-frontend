@@ -17,7 +17,7 @@ function Home(props){
     useEffect(()=>{
 
         if (props.authenticated){
-            props.history.push('/details')
+            props.history.push('/main')
         }
     },[])
     return(

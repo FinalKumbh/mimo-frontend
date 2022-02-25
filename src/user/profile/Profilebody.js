@@ -10,8 +10,8 @@ export  function Profilebody() {
     <div>
 
       <div className="keep">
-          <img className="keepimg" src={process.env.PUBLIC_URL + `assets/image/keep.png`} />
-                 <p>스크랩북</p>
+          <img className="keepimg" src={process.env.PUBLIC_URL + `assets/image/shopping_basket.png`} />
+                 <p>장바구니</p>
       </div>
        <hr />
 
