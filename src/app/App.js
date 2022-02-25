@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Router,
   Route,
   Switch,
   useHistory
@@ -18,8 +19,13 @@ import Details from '../layout/details/Details';
 import Simulate from '../layout/simulate/Simulate';
 import ItemAdd from '../layout/item/ItemAdd';
 import Review from '../layout/review/Review';
-import Cart from '../layout/cart/Cart'
-import Product from '../layout/item/product'
+import Cart from '../layout/cart/Cart';
+import Product from '../layout/item/product';
+import Webcam_picture from '../layout/modeling/camera';
+import Modelhome from '../layout/modeling/modelhome';
+import Upload from '../layout/modeling/upload';
+import history from '../layout/modeling/history';
+
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
@@ -31,6 +37,8 @@ import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import './App.css';
+
+
 
 import PublicRoute from '../common/PublicRoute.js'
 
@@ -109,7 +117,8 @@ class App extends Component {
           <AppHeader authenticated={this.state.authenticated} onLogout={this.handleLogout} />
         </div>
         <div className="app-body">
-          <Switch>
+          <Router history={history}>
+            <Switch> 
           <Route exact path="/" component={(props)=> <Home {...props} authenticated={this.state.authenticated} currentUser={this.state.currentUser} ww/>}></Route>           
             <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Profile}  ></PrivateRoute>
@@ -135,7 +144,17 @@ class App extends Component {
               render={(props) => <Signup authenticated={this.state.authenticated} {...props} />}></Route>
             <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
             <Route component={NotFound}></Route>
-          </Switch>
+
+            <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Modelhome}></PrivateRoute>
+            <PrivateRoute path="/upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Upload}></PrivateRoute>
+            <PrivateRoute path="/webcam" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Webcam_picture}></PrivateRoute>
+
+
+            </Switch>
+          </Router>
         </div>
         <Alert stack={{limit: 3}}             //얜 뭐지?
           timeout = {3000}

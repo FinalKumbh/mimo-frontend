@@ -104,7 +104,7 @@ function Main() {
         <hr />
         <div class="icon">
         <NavLink to="/main">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /> </NavLink>
-        <NavLink to="/simulate">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png`}  /> </NavLink>
+        <NavLink to="/modelhome">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png`}  /> </NavLink>
         <NavLink to="/review">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png`}  /> </NavLink>
         <NavLink to="/profile">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/mypage.png`}  /> </NavLink>
  
