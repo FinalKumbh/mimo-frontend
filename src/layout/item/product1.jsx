@@ -24,9 +24,9 @@ function Product(props) {
       </div>
         <div className='prod_title'>
           <p>롬앤</p>  
-          <p>롬앤 제로 벨벳 틴트 #오리지널시리즈</p>
-          <p>판매가 </p>
-          <p>8,400원</p>
+          <p className='itemTitle'>롬앤 제로 벨벳 틴트 #오리지널시리즈</p>
+          <p >판매가 </p>
+          <p className='itemPrice'>8,400원</p>
         </div>
         <div className='payimg'>
         <NavLink to="/cart">  <img className="basket" src={process.env.PUBLIC_URL+`assets/image/basket.png` }/></NavLink>

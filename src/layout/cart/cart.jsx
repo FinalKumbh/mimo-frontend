@@ -4,6 +4,10 @@ import {Redirect,  NavLink } from "react-router-dom";
 import {cart} from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 import {BUY} from '../../constants';
+import { FooterNav } from '../../layout/nav/FooterNav';
+import { HeaderNav } from '../nav/HeaderNav';
+
+
 
 function Cart(props) {
     if (props.authenticated) {
@@ -16,14 +20,10 @@ function Cart(props) {
             }}/>;
     }
     return (
-        <div className="App">
-              <div className="first-nav">
-     
-        
-    <NavLink to="/profile"><img id="mypage" src={process.env.PUBLIC_URL+`assets/image/mypage.png` }/></NavLink>
-    <NavLink to="/cart">  <img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/></NavLink>
-     </div>
-   <div className="event">EVENT</div>
+        <div className="Cart">
+ 
+            <HeaderNav/>
+  
 
             <div className="logininfotxt">
                 <p>
@@ -59,6 +59,12 @@ function CartForm() {;
    <hr/>
  
  <a  className="buybutton" href={BUY}>  <img   src={process.env.PUBLIC_URL+`assets/image/buybutton.png`}  /></a>
+    <footer>
+        <FooterNav/>
+    </footer>
+                     
+
+
  </div>
   
     );

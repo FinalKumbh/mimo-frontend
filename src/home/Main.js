@@ -3,7 +3,8 @@ import React, { Component, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Home.css";
 
-import { REVIEW , HOME , MYPAGE, CAMERA} from '../constants';
+import {FooterNav} from './nav/FooterNav';
+import { HeaderNav } from './nav/HeaderNav';
 
 function Main() {
   let [아이탬제목, 아이탬변경] = useState([
@@ -16,12 +17,7 @@ function Main() {
   //const navigate = useNavigate(); 
   return (
     <div className="App">
-      <div className="first-nav">
-     
-  
-      <NavLink to="/cart"><img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/></NavLink>
-      </div>
-   
+      <HeaderNav/>
     <div className="third-nav">
           <div className="eventimagesample">
           <NavLink to="/event:1"><img id="eimage1" src={process.env.PUBLIC_URL+`assets/image/eventimage1.png` }/></NavLink>
@@ -39,21 +35,21 @@ function Main() {
 
 
             <div class="bestimage1">
-            <NavLink to="/product1">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
+            <NavLink to="/product">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
               
                 <p>제로 벨벳 틴트</p>
                 <p> #오리지널시리즈</p>
              <hr />
             </div>
             <div class="bestimage2">
-            <NavLink to="/product2">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png` }/> </NavLink>
+            <NavLink to="/product1">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png` }/> </NavLink>
           
                 <p>밀크티 벨벳 틴트</p>
                 <p> #홍차컬러 #밀크</p>
              <hr />
             </div>
             <div class="bestimage3">
-            <NavLink to="/product3">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem3.png` }/> </NavLink>
+            <NavLink to="/product2">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem3.png` }/> </NavLink>
              
                 <p>블러 퍼지 틴트</p>
                 <p> #무광 그라데이션</p>
@@ -102,13 +98,10 @@ function Main() {
     <footer>
     <div class="sixth-nav">
         <hr />
-        <div class="icon">
-        <NavLink to="/main">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/home.png`}  /> </NavLink>
-        <NavLink to="/modelhome">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/camera.png`}  /> </NavLink>
-        <NavLink to="/review">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/review.png`}  /> </NavLink>
-        <NavLink to="/profile">  <img id="eimage2" src={process.env.PUBLIC_URL+`assets/image/mypage.png`}  /> </NavLink>
- 
-        </div>
+    <footer>
+        <FooterNav/>
+    </footer>
+                
       </div>
     </footer>
 

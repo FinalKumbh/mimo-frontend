@@ -92,3 +92,41 @@ export function cart() {
         method: 'GET'
     });
 }
+
+
+export function setItem({email, itemType, itemTone}) {
+    if(!localStorage.getItem(ACCESS_TOKEN)) {
+        return Promise.reject("No access token set.");
+    }
+    return axios
+        .post(API_BASE_URL + `/{itemid}`, {
+            itemType,
+            itemTone
+        })
+}
+
+export function product() {
+    return axios.get( API_BASE_URL + "/main" ).then( res => {
+        console.log(res);
+
+    });
+}
+export function setItemType({  itemType}) {
+    if(!localStorage.getItem(ACCESS_TOKEN)) {
+        return Promise.reject("No access token set.");
+    }
+    return axios
+        .post(API_BASE_URL + `/{itemid}`, {
+            itemType
+        })
+}
+
+export function setItemTitle({email, itemTitle}) {
+    if(!localStorage.getItem(ACCESS_TOKEN)) {
+        return Promise.reject("No access token set.");
+    }
+    return axios
+        .post(API_BASE_URL + `/user/update/skin/${email}`, {
+            itemTitle
+        })
+}

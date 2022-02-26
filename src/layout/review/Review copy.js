@@ -4,7 +4,7 @@ import { details } from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 import './review.css'
 
-function Review(props) {
+function Review2(props) {
   if(props.authenticated) {
     return <Redirect
         to={{
@@ -47,4 +47,4 @@ function Review(props) {
 }
 
 
-export default Review;
+export default Review2;

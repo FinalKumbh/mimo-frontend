@@ -55,12 +55,12 @@ function Details(props) {
     
     useEffect(() => {
         setComponent
-        // if (props.currentUser.skinType) {
-        //     setSkinType(props.currentUser.skinType.split(','))
-        // }
-        // if (props.currentUser.skinTone) {
-        //     setToneType(props.currentUser.skinTone.split(','))
-        // }
+        if (props.currentUser.skinType) {
+            setSkinType(props.currentUser.skinType.split(','))
+        }
+        if (props.currentUser.skinTone) {
+            setskinTone(props.currentUser.skinTone.split(','))
+        }
     }, [])
   
   

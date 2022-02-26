@@ -53,6 +53,8 @@ import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import './App.css';
 
 
+import Review2 from '../layout/review/Review copy';
+
 
 import PublicRoute from '../common/PublicRoute.js'
 
@@ -137,6 +139,8 @@ class App extends Component {
               component={Profile}  ></PrivateRoute>
             <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Main}></PrivateRoute>
+
+              
                <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Details}></PrivateRoute>
          
@@ -144,6 +148,9 @@ class App extends Component {
               component={Simulate}></PrivateRoute>
              <PrivateRoute path="/review" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Review}></PrivateRoute>
+
+            <PrivateRoute path="/review2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Review2}></PrivateRoute>
               <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={ItemAdd}></PrivateRoute>
                <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}

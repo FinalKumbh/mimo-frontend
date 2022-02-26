@@ -5,7 +5,7 @@ export const OAUTH2_REDIRECT_URI = 'http://localhost:3000/oauth2/redirect'
 
 export const GOOGLE_AUTH_URL = API_BASE_URL + '/oauth2/authorize/google?redirect_uri=' + OAUTH2_REDIRECT_URI;
 
-export const REVIEW = API_BASE_URL + '/review'
+
 
 export const HOME = 'http://localhost:3000/home'
 export const MYPAGE =  'http://localhost:3000/mypage'
@@ -20,3 +20,5 @@ export const CAMERAIMAGE = 'http://localhost:3000/cameraimage'
 export const PROD = 'http://localhost:3000/prod:id'
 
 export const BUY = `http://localhost:3000/buy`
+
+export const REVIEW = 'http://localhost:3000/review'

@@ -2,6 +2,8 @@ import React, { Component, useEffect, useState } from 'react';
 import {  Redirect } from "react-router-dom";
 import { details } from '../../util/APIUtils';
 import Alert from 'react-s-alert';
+import ProductList from './ProductList';
+
 import './product.css'
 function Product(props) {
   if(props.authenticated) {
@@ -11,9 +13,25 @@ function Product(props) {
         state: { from: this.props.location }
     }}/>;            
   }
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(()=> {
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+  
+    fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
+    .then(response => response.json())
+    .then(result => setProducts(result))
+    .catch(error => console.log('error'. error))  
+  }, [])
+ 
+
   return (
     <div className="product">
-    
+     <ProductList products={products} />
       <div className='productNav'> 
       <div className='producthead'>
         <img className="product_prod" src={process.env.PUBLIC_URL+`assets/image/bestitem2.png`  }/>

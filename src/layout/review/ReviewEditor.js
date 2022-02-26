@@ -7,7 +7,7 @@ const  ReviewEditor = ({ onCreate }) => {
   const [state, setState] = useState({
     author: "",
     content: "",
-    emotion: 1
+   like: 1
   });
 
   const handleChangeState = (e) => {
@@ -33,7 +33,7 @@ const  ReviewEditor = ({ onCreate }) => {
     setState({
       author: "",
       content: "",
-      emotion: 1
+     like: 1
     });
   };
 

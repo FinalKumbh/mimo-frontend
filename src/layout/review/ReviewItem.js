@@ -6,7 +6,7 @@ const ReviewItem = ({
   id,
   author,
   content,
-  emotion,
+  like,
   created_date
 }) => {
   useEffect(() => {
@@ -45,7 +45,7 @@ const ReviewItem = ({
     <div className="ReviewItem">
       <div className="info">
         <span className="author_info">
-          작성자 : {author} | ❤ : {emotion}
+          작성자 : {author} | ❤ : {like}
         </span>
         <br />
         <span className="date">
