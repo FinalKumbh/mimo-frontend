@@ -31,7 +31,7 @@
 .review_contents1{
     width: 342px;
     height: 42px;
-    margin: 14px 17px 0 2px;
+    margin: 14px 17px 2px 2px;
     font-family: NotoSansCJKKR;
     font-size: 14px;
     font-weight: normal;
@@ -73,7 +73,7 @@
 .review_contents2{
     width: 342px;
     height: 42px;
-    margin: 14px 17px 0 2px;
+    margin: 14px 17px 17px 2px;
     font-family: NotoSansCJKKR;
     font-size: 14px;
     font-weight: normal;
@@ -87,7 +87,7 @@
 .akar-iconsheart {
     width: 24px;
     height: 24px;
-    margin: 4px 22px -22px 269px;
+    margin: 4px 22px -26px 272px;
     padding: 3px 2px 3.2px;
 }
 .review_user2_count {
