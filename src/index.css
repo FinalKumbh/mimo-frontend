@@ -49,14 +49,14 @@ body {
 **/
 
 a {
-  color: #2098f3;
+  color: #C13E3E;
   text-decoration: none;
   word-wrap: break-word;
   cursor: pointer;
 }
 
 a:hover {
-  color: #40a9ff;
+  color: #C13E3E;
   text-decoration: none;
 }
 
@@ -104,13 +104,13 @@ a:hover {
 
 .btn-primary {
     color: #fff;
-    background-color: #2098f3;
-    border-color: #2098f3;  
+    background-color: #C13E3E;
+    border-color: #C13E3E;  
 } 
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-  background-color: #40a9ff;
-  border-color: #40a9ff;
+  background-color: #C13E3E;
+  border-color: #C13E3E;
 }
 
 .btn-success {
