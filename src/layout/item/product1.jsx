@@ -1,8 +1,9 @@
 import React, { Component, useEffect, useState } from 'react';
-import {  Redirect } from "react-router-dom";
+import {  Redirect , NavLink} from "react-router-dom";
 import { details } from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 import './product.css'
+
 function Product(props) {
   if(props.authenticated) {
     return <Redirect
@@ -11,6 +12,9 @@ function Product(props) {
         state: { from: this.props.location }
     }}/>;            
   }
+
+
+
   return (
     <div className="product">
     
@@ -25,8 +29,8 @@ function Product(props) {
           <p>8,400원</p>
         </div>
         <div className='payimg'>
-          <img className="basket" src={process.env.PUBLIC_URL+`assets/image/basket.png` }/>
-        < img classNameid="pay" src={process.env.PUBLIC_URL+`assets/image/pay.png` }/>
+        <NavLink to="/cart">  <img className="basket" src={process.env.PUBLIC_URL+`assets/image/basket.png` }/></NavLink>
+        <NavLink to="/pay"> < img classNameid="pay" src={process.env.PUBLIC_URL+`assets/image/pay.png` }/></NavLink>
         </div>
    
     </div>
