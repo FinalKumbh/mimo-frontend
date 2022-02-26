@@ -1,5 +1,5 @@
 import React, {  useCallback, useEffect, useMemo, useRef, useState } from "react";
-import "./Review.css";
+import "./review.css";
 import ReviewEditor from "./ReviewEditor";
 import ReviewList from "./ReviewList";
 

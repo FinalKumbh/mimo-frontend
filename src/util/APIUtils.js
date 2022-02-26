@@ -24,15 +24,15 @@ const request = (options) => {
     );
 };
 
-export function setSkin() {
+export function setSkin({email, skinType, skinTone}) {
     if(!localStorage.getItem(ACCESS_TOKEN)) {
         return Promise.reject("No access token set.");
     }
-
-    return request({
-        url: API_BASE_URL + "/test/skin",
-        method: 'GET'
-    });
+    return axios
+        .post(API_BASE_URL + `/user/update/skin/${email}`, {
+            skinType,
+            skinTone
+        })
 }
 
 export function getCurrentUser() {

@@ -41,26 +41,26 @@ function Details(props) {
       )
     }
     const save = () => {
-        console.log('props',props)
-        console.log('save', {
-            email : props.currentUser.email,
-            skinType,
-            skinTone
-        }, props.currentUser)
-
-        
+        setSkin({
+            email: props.currentUser.email,
+            skinType: skinType.join(','),
+            skinTone: skinTone.join(','),
+        })
     }
 
     
     const setComponent = async () => {
-        const tone = await setSkin();
-        console.log(tone)
-        setskinTone(tone)
+        
     }
+    
     useEffect(() => {
-        setComponent()
-     
-        console.log('props', props.currentUser)
+        setComponent
+        // if (props.currentUser.skinType) {
+        //     setSkinType(props.currentUser.skinType.split(','))
+        // }
+        // if (props.currentUser.skinTone) {
+        //     setToneType(props.currentUser.skinTone.split(','))
+        // }
     }, [])
   
   
