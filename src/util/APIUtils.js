@@ -62,7 +62,7 @@ export function signup(signupRequest) {
     });
 }
 
-export function details(detailsRequest) {
+export function details() {
     return axios.get( API_BASE_URL + "/home" ).then( res => {
         console.log(res);
 

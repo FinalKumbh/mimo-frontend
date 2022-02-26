@@ -1,7 +1,7 @@
 import React, {Component, useEffect, useState} from 'react';
 import "./Details.css";
 import {Redirect, NavLink} from "react-router-dom";
-import {details,  setSkin} from '../../util/APIUtils';
+import {details, getSkin, setSkin} from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 
  
@@ -13,7 +13,7 @@ function Checkboxes(props) {
     )
 }
 
-function Details(props) {
+function Details() {
     const [skinType, setSkinType] = useState([]);
     const [skinTone, setskinTone] = useState([]);
     const getClassSkinType = type =>{
@@ -41,27 +41,29 @@ function Details(props) {
       )
     }
     const save = () => {
-        console.log('props',props)
+        if (skinType.length === 0) {
+        }
         console.log('save', {
-            email : props.currentUser.email,
             skinType,
             skinTone
-        }, props.currentUser)
+        })
 
+        const setSkinRequest = Object.assign({}, skinType, skinTone);
         
+        console.log(setSkinRequest)
+        setSkin(setSkinRequest);
+        //     setSkin(useremail ,setSkinRequest);
     }
 
     
-    const setComponent = async () => {
-        const tone = await setSkin();
-        console.log(tone)
-        setskinTone(tone)
-    }
-    useEffect(() => {
-        setComponent()
-     
-        console.log('props', props.currentUser)
-    }, [])
+    // const setComponent = async () => {
+    //     const tone = await getSkin();
+    //     console.log(tone)
+    //     setskinTone(tone)
+    // }
+    // useEffect(() => {
+    //     setComponent()
+    // }, [])
   
   
     return( 

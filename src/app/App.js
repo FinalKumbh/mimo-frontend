@@ -26,6 +26,20 @@ import Modelhome from '../layout/modeling/modelhome';
 import Upload from '../layout/modeling/upload';
 import history from '../layout/modeling/history';
 
+import Product1 from '../layout/item/product1';
+import Product2 from '../layout/item/product2';
+import Product3 from '../layout/item/product3';
+import Product4 from '../layout/item/product4';
+import Product5 from '../layout/item/product5';
+import Product6 from '../layout/item/product6';
+import Product7 from '../layout/item/product7';
+import Product8 from '../layout/item/product8';
+
+
+
+
+
+
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
@@ -117,7 +131,6 @@ class App extends Component {
           <AppHeader authenticated={this.state.authenticated} onLogout={this.handleLogout} />
         </div>
         <div className="app-body">
-          <Router history={history}>
             <Switch> 
           <Route exact path="/" component={(props)=> <Home {...props} authenticated={this.state.authenticated} currentUser={this.state.currentUser} ww/>}></Route>           
             <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
@@ -137,6 +150,34 @@ class App extends Component {
               component={Product}></PrivateRoute>
                 <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Cart}></PrivateRoute>
+
+               <PrivateRoute path="/product1" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product1}></PrivateRoute>
+
+               <PrivateRoute path="/product2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product2}></PrivateRoute>
+
+              <PrivateRoute path="/product3" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product3}></PrivateRoute>
+
+              <PrivateRoute path="/product4" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product4}></PrivateRoute>
+
+              <PrivateRoute path="/product5" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product5}></PrivateRoute>
+
+            <PrivateRoute path="/product6" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product6}></PrivateRoute>
+
+            <PrivateRoute path="/product7" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product7}></PrivateRoute>
+
+            <PrivateRoute path="/product8" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product8}></PrivateRoute>
+
+
+
+              
             <Route path="/login"
               render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
          
@@ -154,7 +195,6 @@ class App extends Component {
 
 
             </Switch>
-          </Router>
         </div>
         <Alert stack={{limit: 3}}             //얜 뭐지?
           timeout = {3000}
