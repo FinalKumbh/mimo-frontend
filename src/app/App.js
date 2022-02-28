@@ -137,6 +137,11 @@ class App extends Component {
             <Route exact path="/" component={(props)=> <Home {...props} authenticated={this.state.authenticated} currentUser={this.state.currentUser} ww/>}></Route>           
               <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={Profile}  ></PrivateRoute>
+
+              <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+                component={Modelhome}></PrivateRoute>
+
+
               <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={Main}></PrivateRoute>
 
@@ -193,8 +198,9 @@ class App extends Component {
               <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
               <Route component={NotFound}></Route>
 
-              <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Modelhome}></PrivateRoute>
+              {/* <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+                component={Modelhome}></PrivateRoute> */}
+
               <PrivateRoute path="/upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={Upload}></PrivateRoute>
               <PrivateRoute path="/webcam" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
