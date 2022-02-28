@@ -20,24 +20,26 @@ import Simulate from '../layout/simulate/Simulate';
 import ItemAdd from '../layout/item/ItemAdd';
 import Review from '../layout/review/Review';
 import Cart from '../layout/cart/Cart';
-import Product from '../layout/item/product';
 import Webcam_picture from '../layout/modeling/camera';
 import Modelhome from '../layout/modeling/modelhome';
 import Upload from '../layout/modeling/upload';
 import history from '../layout/modeling/history';
 
-import Product1 from '../layout/item/product1';
-import Product2 from '../layout/item/product2';
-import Product3 from '../layout/item/product3';
-import Product4 from '../layout/item/product4';
-import Product5 from '../layout/item/product5';
-import Product6 from '../layout/item/product6';
-import Product7 from '../layout/item/product7';
-import Product8 from '../layout/item/product8';
+import ItemApp from '../layout/item/ItemApp';
+
+// import Product from '../layout/item/product';
+// import Product1 from '../layout/item/product1';
+// import Product2 from '../layout/item/product2';
+// import Product3 from '../layout/item/product3';
+// import Product4 from '../layout/item/product4';
+// import Product5 from '../layout/item/product5';
+// import Product6 from '../layout/item/product6';
+// import Product7 from '../layout/item/product7';
+// import Product8 from '../layout/item/product8';
 
 
 
-
+import Movie from '../layout/Movie/Movie';
 
 
 
@@ -53,7 +55,7 @@ import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import './App.css';
 
 
-import Review2 from '../layout/review/Review copy';
+import Review2 from '../layout/review/Reviewcopy';
 
 
 import PublicRoute from '../common/PublicRoute.js'
@@ -153,12 +155,16 @@ class App extends Component {
               component={Review2}></PrivateRoute>
               <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={ItemAdd}></PrivateRoute>
-               <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product}></PrivateRoute>
+             
                 <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Cart}></PrivateRoute>
 
-               <PrivateRoute path="/product1" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+
+{/* <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Product}></PrivateRoute> */}
+
+
+               {/* <PrivateRoute path="/product1" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Product1}></PrivateRoute>
 
                <PrivateRoute path="/product2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
@@ -180,9 +186,10 @@ class App extends Component {
               component={Product7}></PrivateRoute>
 
             <PrivateRoute path="/product8" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product8}></PrivateRoute>
+              component={Product8}></PrivateRoute> */}
 
-
+  <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={ItemApp}></PrivateRoute>
 
               
             <Route path="/login"
@@ -199,6 +206,10 @@ class App extends Component {
               component={Upload}></PrivateRoute>
             <PrivateRoute path="/webcam" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Webcam_picture}></PrivateRoute>
+
+
+            <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Movie}></PrivateRoute>
 
 
             </Switch>

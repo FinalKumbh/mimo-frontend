@@ -29,6 +29,19 @@ function ItemTitleboxes(props){
 function Product(props) {
   const [itemType, setItemType] = useState([]);
   const [itemTitle, setItemTitle] = useState([]);
+  const [item_id, setItem_id] = useState([]);
+
+  const getClassItem_id= type => {
+    return item_id.includes(type) ? 'checked' : '';
+  }
+
+  const toggleItem_id = type => {
+    setItem_id(
+      item_id.includes(type)
+      ? item_id.filter(r => r!==type)
+      : [...item_id, type]
+    )
+  }
  const getClassItemType = type =>{
       return itemType.includes(type) ? 'checked' : '';
    }
@@ -55,21 +68,24 @@ const toggleItemTitle = type => {
 }
 
 
-  const save = () => {
+  const save = (props) => {
       setItem({
-          email: props.currentUser.email,
+          item_id : item_id.join(','),
+
           itemType: itemType.join(','),
           itemTitle: itemTitle.join(','),
         })
       
       console.log('save', {
         itemType,
-        itemTitle
+        itemTitle,
+        item_id
+        
 
     })
 
     setItemTitle({
-      email: props.currentUser.email,
+      item_id : item_id.join(','),
       itemTitle: itemTitle.join(','),
   })
  
@@ -89,6 +105,9 @@ const toggleItemTitle = type => {
     if (props.currentUser.itemTitle) {
       setItemTitle(props.currentUser.itemTitle.split(','))
     }
+    if (props.currentUser.item_id){
+      setItem_id(props.currentUser.ItemTitleboxes.split(','))
+    }
      
   }, [])
 
@@ -96,6 +115,11 @@ const toggleItemTitle = type => {
   return( 
       <div>
           <div className="skintypebutton">
+          <div className="skintyperow0" > 
+              {['장바구니1','장바구니2'].map((type,i) => (
+                  <Buyboxes key={i} mainClass="submitButton0" getClassType={getClassItem_id} toggleType={toggleItem_id} type={type} />
+              ))}
+              </div>
               <div className="skintyperow1" > 
               {['장바구니1','장바구니2'].map((type,i) => (
                   <Buyboxes key={i} mainClass="submitButton1" getClassType={getClassItemType} toggleType={toggleItemType} type={type} />
