@@ -13,11 +13,13 @@ function ItemApp() {
     setIsLoading(true);
     setError(null);
     try{
-      const response =  await fetch('http://localhost:3000/item/${item_id}')
+      const response =  await fetch('http://localhost:8080/item/309')
       if (!response.ok){
         throw new Error('Something went wrong!');
       }
       const data = await response.json();
+
+      console.log(data);
  
   
       const transformedItems = data.results.map(itemData => {
@@ -39,6 +41,7 @@ function ItemApp() {
     }
     setIsLoading(false);
     }
+    // let content = <p> Found no movies.</p>;
 
 
   return (

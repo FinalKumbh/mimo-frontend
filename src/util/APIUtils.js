@@ -106,12 +106,12 @@ export function setItem({email,item_id, itemType, itemTone}) {
         })
 }
 
-export function product(item_id) {
-    return axios.get( API_BASE_URL + `/item/${item_id}`  ).then( res => {
-        console.log(res);
+// export function product(item_id) {
+//     return axios.get( API_BASE_URL + `/item/${item_id}`  ).then( res => {
+//         console.log(res);
 
-    });
-}
+//     });
+// }
 export function setItemType({ item_id, itemType}) {
     if(!localStorage.getItem(ACCESS_TOKEN)) {
         return Promise.reject("No access token set.");
