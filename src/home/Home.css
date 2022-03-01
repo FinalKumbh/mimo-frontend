@@ -1,127 +1,117 @@
 
-.first-nav{
-    background:ivory;
-    border: 3px solid olive;
-    display: flex;
-    flex-direction: row;
-    
-    flex-wrap: nowrap;
-    justify-content:space-between;
-      height: 50px;
-    overflow:visible;
-    align-items: center;
-    
-    }
+
   
   .logo{
-      position:absolute;
-      left: 10px;
-      height:min-content;
+    position:absolute;
+    left: 10px;
+    height:min-content;
+}
+ 
+.third-nav{
+    display: flex;
+    position: relative;
+    margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+ 
+ 
+}
+
+.eventimagesection{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 200px;
+    width:1200px;
+
+}
+.eventimagesample{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: fit-content;
+  animation-name: event;
+  animation-duration: 3s;  
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes event {
+  from {background-image: url(https://romand.co.kr/web/product/big/202202/fe15a54b9442941c0bf70813055aad4f.jpg);}
+  to { background-image: url(https://romand.co.kr/web/upload/category/shop1_74_title_932352.jpg);}
+}
+
+
+.bestitem {
+  padding : 15px;
+  color: #363636;
+  font-weight: 350;
+  font-size: 22px;
+  text-align : left ;
+
+}
+
+
+.bestitemlist {
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-   
-  .third-nav{
-      display: flex;
-      position: relative;
-      margin: 20px;
+.bestitemimagesample{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-   
-   
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    text-align: center;
+}
+
+
+
+ 
+.newitemlist {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content:space-between;
   }
-  
-  .eventimagesection{
-      display: flex;
-      flex-wrap: nowrap;
-      height: 200px;
-      width:1200px;
-  
-  }
-  .eventimagesample{
+.newitemimagesample{
+    display: flex;
+    flex: 1  25%;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    text-align: center;
+}
+
+
+
+
+
+  .icon{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    width: fit-content;
-    animation-name: event;
-    animation-duration: 3s;  
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-  }
-  
-  
-  @keyframes event {
-    from {background-image: url(https://romand.co.kr/web/product/big/202202/fe15a54b9442941c0bf70813055aad4f.jpg);}
-    to { background-image: url(https://romand.co.kr/web/upload/category/shop1_74_title_932352.jpg);}
-  }
-  
-  
-  .bestitem {
-    background-color: aliceblue;
-    padding : 15px;
-    color:black;
-    font-weight: 600;
-    font-size: 13px;
-   text-align : left ;
-  }
-  
-  
-  .bestitemlist {
-      margin-top: 30px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  .bestitemimagesample{
-      display: flex;
-      flex-direction: row;
-      flex-wrap:nowrap;
-      justify-content:space-between;
-      text-align: center;
-  }
-  
-  .newitem{
-      background-color: aliceblue;
-      padding : 15px;
-      color:black;
-      font-weight: 600;
-      font-size: 13px;
-     text-align : left ;
-  }
-  
-   
-  .newitemlist {
-      margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      padding-left: 20px;
-      padding-right: 20px;
-      justify-content:space-between;
-    }
-  .newitemimagesample{
-      display: flex;
-      flex: 1  25%;
-      flex-wrap: wrap;
-      justify-content:space-between;
-      text-align: center;
-  }
-  
-  .sixth-nav{
-      display: block ;
-      padding-bottom:  20px;
-      border :maroon;
-      border-style: solid;
-      border-width: 0px 0px 30px 0px;
-    }
-  
-  
-  
-  
-  
-    .icon{
-      display: flex;
-      flex-direction: row;
-      flex-wrap:nowrap;
-      justify-content:space-around;
-  
-  
-  }
+    flex-wrap:nowrap;
+    justify-content:space-around;
+}
+.nav_ico{
+  width: 30px;
+  height: 30px;
+}
+.home_logo{
+  width: 280px;
+  height: 112px;
+  position: relative;
+  top: 200px;
+  left: 100px;
+}
+.home_text{
+  position: relative;
+  top: 500px;
+  left: 80px;
+  word-break: keep-all;
+  width: 400px;
+  text-align: center;
+}

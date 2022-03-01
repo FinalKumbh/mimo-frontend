@@ -1,158 +1,166 @@
 .Home {
-    font-family: sans-serif;
-    text-align: center;
-  }
+  font-family: sans-serif;
+  text-align: center;
+}
 
-  body {
-    font-family: "nanumsquare";
-  }
+body {
+  font-family: "nanumsquare";
+}
 
 .second-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-grow: 2;
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-grow: 2;
 }
 .left{
-  border: none;
+border: none;
 }
 
 .right{
-  border:none;
+border:none;
 }
-  .header {
-    flex-grow: 2;
-    background:floralwhite;
-    color:indianred;
-    font-weight: 400;
-    font-size: 30px;
-  }
+.header {
+  flex-grow: 2;
+  background:floralwhite;
+  color:indianred;
+  font-weight: 400;
+  font-size: 30px;
+}
 
 #mypage{
-    float: right;
-    height:min-content;
-  }
-#basket{
   float: right;
   height:min-content;
 }
+#basket{
+float: right;
+height:min-content;
+}
 
 .event {
-  background:whitesmoke;
- flex-grow: initial;
-  text-align: center;
-  font-weight: 600;
-  font-size: 15px;
-  border: lightseagreen;
-  border-style: ridge;
-  border-width: 0px 0px 10px 0px;
+background:whitesmoke;
+flex-grow: initial;
+text-align: center;
+font-weight: 600;
+font-size: 15px;
+border: lightseagreen;
+border-style: ridge;
+border-width: 0px 0px 10px 0px;
 }
 
 .third-nav{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  border:lightseagreen;
-  border-style: ridge;
-  border-width: 0px 0px 10px 0px;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+border:lightseagreen;
+border-style: ridge;
+border-width: 0px 0px 10px 0px;
 }
- 
+
 .eventimagesample{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
 
 }
 
 .checkitem {
-  background:indianred;
- flex-grow: initial;
-  text-align: center;
-  padding : 15px;
-  color:honeydew;
-  font-weight: 600;
-  font-size: 13px;
-  border: lightseagreen;
-  border-style: ridge;
+background:indianred;
+flex-grow: initial;
+text-align: center;
+padding : 15px;
+color:honeydew;
+font-weight: 600;
+font-size: 13px;
+border: lightseagreen;
+border-style: ridge;
+border-width: 0px 0px 10px 0px;
+}
+
+.list {
+  margin-top: 30px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.fifth-nav{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   border-width: 0px 0px 10px 0px;
 }
-.bestitem {
-  background:whitesmoke;
- flex-grow: initial;
-  text-align: center;
-  font-weight: 600;
-  font-size: 15px;
-  border: lightseagreen;
-  border-style: ridge;
-  border-width: 0px 0px 10px 0px;
+
+.bestimagesample img{
+  padding: 5px;
+   
 }
-  .list {
-    margin-top: 30px;
-    text-align: left;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
+.bestimagesample{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 
-  .fifth-nav{
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    border:lightseagreen;
-    border-style: ridge;
-    border-width: 0px 0px 10px 0px;
-  }
+.sixth-nav{
+  padding-bottom: 10px;
+  padding-top: 23px;
+  display: flexbox;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border :#C4C4C4;
+  border-style: solid;
+  border-width: 0px 0px -1px 0px;
+}
 
-  .bestimagesample img{
-    padding: 5px;
-     
-  }
-  
-  .bestimagesample{
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .sixth-nav{
-    padding-bottom: 10px;
-    padding-top: 10px;
-    display: flexbox;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    border :maroon;
-    border-style: solid;
-    border-width: 0px 0px 30px 0px;
-  }
-
-  .bestitem{
-    background:indianred;
-    padding : 15px;
-    color:honeydew;
-    font-weight: 600;
-    font-size: 13px;
-  }
 
 #homeicon{
-  float:left;
-  margin : -5px 20px 0px 20px;
+float:left;
+margin : -5px 20px 0px 20px;
 }
 #searchicon{
-  float: left;
-  margin: -5px 15px 0px 15px;
+float: left;
+margin: -5px 15px 0px 15px;
 }
 
 #cameraicon{
-  float :unset;
-  margin: 3px 5px 0px 5px;
+float :unset;
+margin: 3px 5px 0px 5px;
 }
 
 #shareicon{
-  float: right;
-  margin: 3px 20px 0px 20px;
+float: right;
+margin: 3px 20px 0px 20px;
 }
 #loveicon{
-  float:right;
-  margin : 3px 15px 0px 15px;
+float:right;
+margin : 3px 15px 0px 15px;
+}
+.main_event1{
+width: 500px;
+height: 280px;
+/* position: relative;
+top: -32px;
+left: -95px; */
+
+}
+.eimage2 {
+width: 140px;
+height: 140px;
+}
+.eimage3{
+width: 190px;
+height: 190px;
+}
+.fourth-nav {
+width: 500px;
+height: 280px;
+}
+.main_prod_gray{
+color: #7E7E7E;
+}
+.prod_size{
+margin : 0px 0px 20px 0px;
 }
