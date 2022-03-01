@@ -1,17 +1,5 @@
 
-.first-nav{
-    background:ivory;
-    border: 3px solid olive;
-    display: flex;
-    flex-direction: row;
-    
-    flex-wrap: nowrap;
-    justify-content:space-between;
-      height: 50px;
-    overflow:visible;
-    align-items: center;
-    
-    }
+
   
   .logo{
       position:absolute;
@@ -57,17 +45,17 @@
   
   
   .bestitem {
-    background-color: aliceblue;
     padding : 15px;
-    color:black;
-    font-weight: 600;
-    font-size: 13px;
-   text-align : left ;
+    color: #363636;
+    font-weight: 350;
+    font-size: 22px;
+    text-align : left ;
+
   }
   
   
   .bestitemlist {
-      margin-top: 30px;
+      margin-top: 10px;
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -79,22 +67,15 @@
       text-align: center;
   }
   
-  .newitem{
-      background-color: aliceblue;
-      padding : 15px;
-      color:black;
-      font-weight: 600;
-      font-size: 13px;
-     text-align : left ;
-  }
+  
   
    
   .newitemlist {
-      margin-top: 30px;
+      margin-top: 15px;
       display: flex;
       flex-wrap: wrap;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 25px;
+      padding-right: 25px;
       justify-content:space-between;
     }
   .newitemimagesample{
@@ -105,14 +86,6 @@
       text-align: center;
   }
   
-  .sixth-nav{
-      display: block ;
-      padding-bottom:  20px;
-      border :maroon;
-      border-style: solid;
-      border-width: 0px 0px 30px 0px;
-    }
-  
   
   
   
@@ -122,6 +95,23 @@
       flex-direction: row;
       flex-wrap:nowrap;
       justify-content:space-around;
-  
-  
+  }
+  .nav_ico{
+    width: 30px;
+    height: 30px;
+  }
+  .home_logo{
+    width: 280px;
+    height: 112px;
+    position: relative;
+    top: 200px;
+    left: 100px;
+  }
+  .home_text{
+    position: relative;
+    top: 500px;
+    left: 80px;
+    word-break: keep-all;
+    width: 400px;
+    text-align: center;
   }

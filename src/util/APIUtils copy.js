@@ -94,17 +94,39 @@ export function cart() {
 }
 
 
-export function setItem({email,item_id, itemType, itemTone}) {
-    if(!localStorage.getItem(ACCESS_TOKEN)) {
-        return Promise.reject("No access token set.");
-    }
-    return axios
-        .post(API_BASE_URL + `/item/${item_id}` , {
-            itemType,
-            itemTone,
-            item_id
-        })
+export function setItem() {
+    fetch(options.url, options).then(response => {
+        return response.json();
+    }).then(data => {
+        data.results;
+    });
+    
 }
+
+
+// const request = (options) => {
+//     const headers = new Headers({
+//         'Content-Type': 'application/json',
+//     })
+    
+//     if(localStorage.getItem(ACCESS_TOKEN)) {
+//         headers.append('Authorization', 'Bearer ' + localStorage.getItem(ACCESS_TOKEN))
+//     }
+
+//     const defaults = {headers: headers};
+//     options = Object.assign({}, defaults, options);
+
+//     return fetch(options.url, options)
+//     .then(response => 
+//         response.json().then(json => {
+//             if(!response.ok) {
+//                 return Promise.reject(json);
+//             }
+//             return json;
+//         })
+//     );
+// };
+
 
 // export function product(item_id) {
 //     return axios.get( API_BASE_URL + `/item/${item_id}`  ).then( res => {
@@ -112,24 +134,24 @@ export function setItem({email,item_id, itemType, itemTone}) {
 
 //     });
 // }
-export function setItemType({ item_id, itemType}) {
-    if(!localStorage.getItem(ACCESS_TOKEN)) {
-        return Promise.reject("No access token set.");
-    }
-    return axios
-        .post(API_BASE_URL + `/item/${item_id}` , {
-            itemType,
-            item_id
-        })
-}
+// export function setItemType({ item_id, itemType}) {
+//     if(!localStorage.getItem(ACCESS_TOKEN)) {
+//         return Promise.reject("No access token set.");
+//     }
+//     return axios
+//         .post(API_BASE_URL + `/item/${item_id}` , {
+//             itemType,
+//             item_id
+//         })
+// }
 
-export function setItemTitle({email,item_id, itemTitle}) {
-    if(!localStorage.getItem(ACCESS_TOKEN)) {
-        return Promise.reject("No access token set.");
-    }
-    return axios
-        .post(API_BASE_URL + `/item/${item_id}` , {
-            itemTitle,
-            item_id
-        })
-}
+// export function setItemTitle({email,item_id, itemTitle}) {
+//     if(!localStorage.getItem(ACCESS_TOKEN)) {
+//         return Promise.reject("No access token set.");
+//     }
+//     return axios
+//         .post(API_BASE_URL + `/item/${item_id}` , {
+//             itemTitle,
+//             item_id
+//         })
+// }

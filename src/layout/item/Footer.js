@@ -5,7 +5,7 @@ import { REVIEW , HOME , MYPAGE, CAMERA} from '../../constants';
  
 
 
-export  function FooterNav() {
+export  function  Footer() {
   return (
     <div>
                      
@@ -30,3 +30,6 @@ export  function FooterNav() {
 
 
 
+
+
+export default Footer
