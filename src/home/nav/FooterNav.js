@@ -2,7 +2,7 @@ import React from 'react'
 import {NavLink, Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom' 
 import { REVIEW , HOME , MYPAGE, CAMERA} from '../../constants';
- 
+import "./FooterNav.css";
 
 
 export  function FooterNav() {

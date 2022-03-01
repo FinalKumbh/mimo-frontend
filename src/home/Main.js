@@ -36,7 +36,7 @@ function Main() {
           <div class="bestitemimagesample">
 
 
-            <div class="bestimage1">
+            <div class="prod_size">
             <NavLink to="/product">  <img id="eimage2" class="eimage2" src={process.env.PUBLIC_URL+`assets/image/bestitem1.png` }/> </NavLink>
               
                 <p>제로 벨벳 틴트</p>

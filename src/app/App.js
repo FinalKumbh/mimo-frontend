@@ -127,7 +127,7 @@ class App extends Component {
 
     return (                              //각 api uri에 보낼 파라미터들
       <div className="app" >
-   
+        <div className='center_app'>
         <div className="app-top-box">
           <AppHeader authenticated={this.state.authenticated} onLogout={this.handleLogout} />
         </div>
@@ -212,6 +212,7 @@ class App extends Component {
         <Alert stack={{limit: 3}}             //얜 뭐지?
           timeout = {3000}
           position='top-right' effect='slide' offset={65} />
+          </div>
       </div>
     );
   }
