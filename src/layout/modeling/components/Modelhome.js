@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import history from './history';
+import history from '../history';
 import "./home.css";
 
-class  Modelhome extends Component{
+class Home extends Component{
     render() {
         return(
             <div className="container-fluid">
@@ -30,4 +30,4 @@ class  Modelhome extends Component{
     }
 }
 
-export default Modelhome;
+export default Home;
