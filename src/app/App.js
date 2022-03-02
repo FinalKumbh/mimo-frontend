@@ -27,15 +27,15 @@ import Upload from '../layout/modeling/components/Upload';
 
 import ItemApp from '../layout/item/ItemApp';
 
-// import Product from '../layout/item/product';
-// import Product1 from '../layout/item/product1';
-// import Product2 from '../layout/item/product2';
-// import Product3 from '../layout/item/product3';
-// import Product4 from '../layout/item/product4';
-// import Product5 from '../layout/item/product5';
-// import Product6 from '../layout/item/product6';
-// import Product7 from '../layout/item/product7';
-// import Product8 from '../layout/item/product8';
+
+ import Product1 from '../layout/product/product1';
+ import Product2 from '../layout/product/product2';
+ import Product3 from '../layout/product/product3';
+ import Product4 from '../layout/product/product4';
+ import Product5 from '../layout/product/product5';
+ import Product6 from '../layout/product/product6';
+ import Product7 from '../layout/product/product7';
+ import Product8 from '../layout/product/product8';
 
 
 
@@ -155,14 +155,13 @@ class App extends Component {
                 component={Review2}></PrivateRoute>
                 <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={ItemAdd}></PrivateRoute>
-                 <PrivateRoute path="/itemapp" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={ItemApp}></PrivateRoute>
+                 <Route path="/itemapp"                 component={ItemApp}></Route>
                 {/* <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={Product}></PrivateRoute> */}
                   <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={Cart}></PrivateRoute>
 
-                {/* <PrivateRoute path="/product1" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+               <PrivateRoute path="/product1" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={Product1}></PrivateRoute>
 
                 <PrivateRoute path="/product2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
@@ -184,7 +183,7 @@ class App extends Component {
                 component={Product7}></PrivateRoute>
 
               <PrivateRoute path="/product8" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product8}></PrivateRoute> */}
+                component={Product8}></PrivateRoute>
 
 
 
@@ -199,7 +198,7 @@ class App extends Component {
 
               <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={Modelhome}></PrivateRoute>
-              <PrivateRoute path="/upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              <PrivateRoute path="/Upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                 component={Upload}></PrivateRoute>
          
 

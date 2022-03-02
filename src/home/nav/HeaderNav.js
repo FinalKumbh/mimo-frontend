@@ -11,7 +11,6 @@ export  function HeaderNav() {
                      
     <hr />
     <div className="first-nav">
-          <NavLink to="/cart"><img id="basket" src={process.env.PUBLIC_URL+`assets/image/shopping_basket.png`}/></NavLink>
      </div>
   
 

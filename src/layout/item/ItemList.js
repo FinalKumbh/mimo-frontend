@@ -6,10 +6,10 @@ import classes from './ItemList.module.css';
 const ItemList = (props) => {
   return (
     <ul className={classes['items-list']}>
-      {props.items.map((item) => (
+      {props.items.map((items) => (
         <Item
-          key={item.id}
-          title={item.title}
+          key={items.id}
+          id={items.id}
          />
       ))}
     </ul>

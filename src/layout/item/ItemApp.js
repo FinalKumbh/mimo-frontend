@@ -1,14 +1,14 @@
 import React , {useState, useEffect} from 'react'
 
 import ItemList from './ItemList';
-import tmpData from './data/db.json'
+
 
 function ItemApp(props) {
 
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-
+  const [itemData, setItemData] = useState("");
 
   const fetchItemsHandler = async(props) =>{
     setIsLoading(true);
@@ -20,34 +20,24 @@ function ItemApp(props) {
         throw new Error('Something went wrong!');
       }
       const data = await response.json();
-      if(data){
-        console.log(data[0]);
+      if(data.itemImgDtoList){
+        setItems(data.itemImgDtoList)
       }
-      console.log(data);
+      console.log(data.itemImgDtoList);
 
-      if (typeof data.results.app === 'function'){
+      if (typeof data.itemImgDtoList === 'function'){
 
       }
  
   
-      const transformedItems = data.results.map(itemData => {
+      const transformedItems = data.itemImgDtoList.map(items => {
         return {
-          id: itemData.item_id,
-          title : itemData.item_name,
-          detail : itemData.item_detail,
-          color : itemData.color,
-          code : itemData.code,
-          price : itemData.price
-  
+          id: items.id,
+     
         };
       });
-
-      const [ItemData, setItemData] = useState("");
-      useEffect(()=>{
-        ItemList(data).then(res => {
-          setItemData(res.data);
-        });
-      },[]);
+ 
+       
 
 
 
@@ -61,8 +51,7 @@ function ItemApp(props) {
     }
     setIsLoading(false);
     }
-    // let content = <p> Found no movies.</p>;
-
+  
 
 
   return (
@@ -78,19 +67,6 @@ function ItemApp(props) {
         {!isLoading && error &&<p>{error}</p>}
       </section>
 
-      <section>
-        {/* <h1>
-          {ItemList.data}{' '}
-          {ItemList.data.select? (
-            <div>
-              {props.data}
-
-            </div>
-          ) : (
-            console.log()
-          )}
-        </h1> */}
-      </section>
 
 
     </React.Fragment>

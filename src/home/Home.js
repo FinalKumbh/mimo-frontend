@@ -1,6 +1,6 @@
 import React, { Component,usetState, useEffect } from 'react';
 import './Home.css';
-import mimoMain from '../img/mimo_main.png';
+import mimoMain from '../img/MIMO_logo.png';
 import { GOOGLE_AUTH_URL, FACEBOOK_AUTH_URL, GITHUB_AUTH_URL, ACCESS_TOKEN } from '../constants';
 import { login } from '../util/APIUtils';
 import { Link, Redirect } from 'react-router-dom'
@@ -23,9 +23,12 @@ function Home(props){
     return(
         <div className="home-container">
             <div className="container">
-                <img src={mimoMain} alt="mimoMain" />
+                <img className="home_logo" src={mimoMain} alt="mimoMain" />
             </div>
-            
+            <div className='home_text'>
+            가입을 진행할 경우, <b>이용약관</b>과 <b>개인정보 수집 및 
+            이용</b>에 대해 동의한 것으로 간주됩니다.
+            </div>
         </div>
     )
 }

@@ -29,14 +29,17 @@ class AppHeader extends Component {
                                             <a onClick={this.props.onLogout}>Logout</a>
                                         </li>
                                         <li>
-                                            <NavLink to="/profile">Cart</NavLink>
+                                            <NavLink to="/cart">Cart</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/profile">camera</NavLink>
+                                            <NavLink to="/Upload">camera</NavLink>
                                         </li>                    
                                         <li>
-                                            <NavLink to="/profile">review</NavLink>
+                                            <NavLink to="/review">review</NavLink>
                                         </li>        
+                                        <li>
+                                            <NavLink to="/itemapp">itemapi</NavLink>
+                                        </li>
                                     </ul>
                                 ): (
                                     <ul>
