@@ -20,12 +20,9 @@ function Main() {
     <div className="App">
       <HeaderNav/>
 
-         
-          <div>
-          <img id="event1" className='main_event1' src={`assets/image/event1.png` }/>
-        
-    
-
+      
+      <div className='event_center'>
+      <img id="event1" className='main_event1' src={`assets/image/event1.png` }/>
       </div>
 
 
@@ -96,10 +93,7 @@ function Main() {
     <footer>
     <div class="sixth-nav">
         
-    <footer>
         <FooterNav/>
-    </footer>
-                
       </div>
     </footer>
 
