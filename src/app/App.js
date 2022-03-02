@@ -19,27 +19,9 @@ import Details from '../layout/details/Details';
 import Simulate from '../layout/simulate/Simulate';
 import ItemAdd from '../layout/item/ItemAdd';
 import Review from '../layout/review/Review';
- 
+import Camera from '../layout/modeling/camera';
 import history from '../layout/modeling/history';
-
 import ItemApp from '../layout/item/ItemApp';
-
-// import Product from '../layout/item/product';
-// import Product1 from '../layout/item/product1';
-// import Product2 from '../layout/item/product2';
-// import Product3 from '../layout/item/product3';
-// import Product4 from '../layout/item/product4';
-// import Product5 from '../layout/item/product5';
-// import Product6 from '../layout/item/product6';
-// import Product7 from '../layout/item/product7';
-// import Product8 from '../layout/item/product8';
-
-
-
-// import Modelhome from '../layout/modeling/components/Modelhome';
-// import Upload from '../layout/modeling/components/Upload';
- 
-
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
@@ -50,11 +32,7 @@ import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import './App.css';
-
-
 import Review2 from '../layout/review/Reviewcopy';
-
-
 import PublicRoute from '../common/PublicRoute.js'
 
 class App extends Component {
@@ -138,7 +116,8 @@ class App extends Component {
               component={Profile}  ></PrivateRoute>
             <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Main}></PrivateRoute>
-
+            <PrivateRoute path="/camera" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Camera}></PrivateRoute>
               
                <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Details}></PrivateRoute>
