@@ -23,21 +23,31 @@ function ItemApp(props) {
       if(data.itemImgDtoList){
         setItems(data.itemImgDtoList)
       }
-      console.log(data.itemImgDtoList);
+      console.log(data);
 
-      if (typeof data.itemImgDtoList === 'function'){
+      if (typeof data.results.app === 'function'){
 
       }
  
   
-      const transformedItems = data.itemImgDtoList.map(items => {
+      const transformedItems = data.results.map(itemData => {
         return {
-          id: items.id,
-     
+          id: itemData.item_id,
+          title : itemData.item_name,
+          detail : itemData.item_detail,
+          color : itemData.color,
+          code : itemData.code,
+          price : itemData.price
+  
         };
       });
- 
-       
+
+      const [ItemData, setItemData] = useState("");
+      useEffect(()=>{
+        ItemList(data).then(res => {
+          setItemData(res.data);
+        });
+      },[]);
 
 
 
@@ -51,7 +61,8 @@ function ItemApp(props) {
     }
     setIsLoading(false);
     }
-  
+    // let content = <p> Found no movies.</p>;
+
 
 
   return (
@@ -67,6 +78,19 @@ function ItemApp(props) {
         {!isLoading && error &&<p>{error}</p>}
       </section>
 
+      <section>
+        {/* <h1>
+          {ItemList.data}{' '}
+          {ItemList.data.select? (
+            <div>
+              {props.data}
+
+            </div>
+          ) : (
+            console.log()
+          )}
+        </h1> */}
+      </section>
 
 
     </React.Fragment>

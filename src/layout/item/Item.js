@@ -2,7 +2,7 @@ import React from 'react';
 import {  Redirect , NavLink} from "react-router-dom";
 import classes from './Item.module.css';
 
-const Item = (items) => {
+const Item = (items, props) => {
   return (
     <li className={classes.item}>
      
@@ -15,9 +15,18 @@ const Item = (items) => {
     </div>
       <div className='prod_title'>
         <p>롬앤</p>  
+        <img src={props.imgName}/>
+
+        <img src={props.imgUrl}/>
+        <img src={items.imgUrl}/>
+        <img src={items.imgName}/>
+        <p>{items.imgName}imgName</p>
+        <p>{items.imgUrl}imgUrl</p>
         <p className='itemTitle'>롬앤 제로 벨벳 틴트 #오리지널시리즈</p>
         <p >판매가 </p>
+     
         <p className='itemPrice'>{items.id}원</p>
+      
       </div>
       <div className='payimg'>
       <NavLink to="/cart">  <img className="basket" src={process.env.PUBLIC_URL+`assets/image/basket.png` }/></NavLink>
