@@ -1,4 +1,4 @@
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 import {
   Router,
   Route,
@@ -19,23 +19,20 @@ import Details from '../layout/details/Details';
 import Simulate from '../layout/simulate/Simulate';
 import ItemAdd from '../layout/item/ItemAdd';
 import Review from '../layout/review/Review';
-import Cart from '../layout/cart/Cart';
-
-import Modelhome from '../layout/modeling/components/Modelhome';
-import Upload from '../layout/modeling/components/Upload';
-
+ 
+import history from '../layout/modeling/history';
 
 import ItemApp from '../layout/item/ItemApp';
 
-
- import Product1 from '../layout/product/product1';
- import Product2 from '../layout/product/product2';
- import Product3 from '../layout/product/product3';
- import Product4 from '../layout/product/product4';
- import Product5 from '../layout/product/product5';
- import Product6 from '../layout/product/product6';
- import Product7 from '../layout/product/product7';
- import Product8 from '../layout/product/product8';
+// import Product from '../layout/item/product';
+// import Product1 from '../layout/item/product1';
+// import Product2 from '../layout/item/product2';
+// import Product3 from '../layout/item/product3';
+// import Product4 from '../layout/item/product4';
+// import Product5 from '../layout/item/product5';
+// import Product6 from '../layout/item/product6';
+// import Product7 from '../layout/item/product7';
+// import Product8 from '../layout/item/product8';
 
 
 
@@ -130,76 +127,21 @@ class App extends Component {
 
     return (                              //각 api uri에 보낼 파라미터들
       <div className="app" >
-        <div className='center_app'>
-            <div className="app-top-box">
-            <AppHeader authenticated={this.state.authenticated} onLogout={this.handleLogout} />
-          </div>
-          <div className="app-body">
-              <Switch> 
-            <Route exact path="/" component={(props)=> <Home {...props} authenticated={this.state.authenticated} currentUser={this.state.currentUser} ww/>}></Route>           
-              <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Profile}  ></PrivateRoute>
-              <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Main}></PrivateRoute>
+   
+        <div className="app-top-box">
+          <AppHeader authenticated={this.state.authenticated} onLogout={this.handleLogout} />
+        </div>
+        <div className="app-body">
+            <Switch> 
+          <Route exact path="/" component={(props)=> <Home {...props} authenticated={this.state.authenticated} currentUser={this.state.currentUser} ww/>}></Route>           
+            <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Profile}  ></PrivateRoute>
+            <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Main}></PrivateRoute>
 
-                
-                <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Details}></PrivateRoute>
-          
-              <PrivateRoute path="/simulate" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Simulate}></PrivateRoute>
-              <PrivateRoute path="/review" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Review}></PrivateRoute>
-
-              <PrivateRoute path="/review2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Review2}></PrivateRoute>
-                <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={ItemAdd}></PrivateRoute>
-                 <Route path="/itemapp"                 component={ItemApp}></Route>
-                {/* <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product}></PrivateRoute> */}
-                  <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Cart}></PrivateRoute>
-
-               <PrivateRoute path="/product1" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product1}></PrivateRoute>
-
-                <PrivateRoute path="/product2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product2}></PrivateRoute>
-
-                <PrivateRoute path="/product3" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product3}></PrivateRoute>
-
-                <PrivateRoute path="/product4" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product4}></PrivateRoute>
-
-                <PrivateRoute path="/product5" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product5}></PrivateRoute>
-
-              <PrivateRoute path="/product6" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product6}></PrivateRoute>
-
-              <PrivateRoute path="/product7" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product7}></PrivateRoute>
-
-              <PrivateRoute path="/product8" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product8}></PrivateRoute>
-
-
-
-                
-              <Route path="/login"
-                render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
-          
-              <Route path="/signup"
-                render={(props) => <Signup authenticated={this.state.authenticated} {...props} />}></Route>
-              <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
-              <Route component={NotFound}></Route>
-
-              <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Modelhome}></PrivateRoute>
-              <PrivateRoute path="/Upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Upload}></PrivateRoute>
+              
+               <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+              component={Details}></PrivateRoute>
          
             <PrivateRoute path="/simulate" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
               component={Simulate}></PrivateRoute>
@@ -270,8 +212,6 @@ class App extends Component {
         <Alert stack={{limit: 3}}             //얜 뭐지?
           timeout = {3000}
           position='top-right' effect='slide' offset={65} />
-      </div>
-
       </div>
     );
   }
