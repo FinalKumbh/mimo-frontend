@@ -64,23 +64,16 @@ function Cart(props) {
 
 function DetailsForm() {;
 
-    // const [skintype,skintone] = useState(""); useState 1
     const [skintype, setSkintype] = useState("");
     const [skintone, setSkintone] = useState("");
 
-    // handleInputChange = handleInputChange.bind(this); handleSubmit =
-    // handleSubmit.bind(this);
+ 
 
     function handleInputChange(event) {
         const target = event.target;
         const inputName = target.name;
         const inputValue = target.value;
-        // const [inputName, setInputName] = useState(target.name);
-        // const [inputValue, setInputValue] = useState(target.value);
-
-        // setInputName(inputValue);
-        // const inputName = target.name; const inputValue = target.value; useState 2
-        // setSkintype( skintype );
+      
 
         if (inputName==skintype){
           setSkintype(inputValue);
@@ -90,19 +83,14 @@ function DetailsForm() {;
 
         console.log(inputName);
         console.log(inputValue);
-        // this.setState({   [inputName] : inputValue });
+ 
     }
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
-        //console.log(this.state.skintype) const detailsRequest
-        // = Object.assign({}, this.state);
+ 
         const detailReqeust = Object.assign({}, {skintype, skintone})
-        //useState 3
-        // TODO 아래 2줄을  useState로 제대로 값을 가져와서 details함수에 넘겨주기 const skintype =
-        // document.querySelector("input[name=skintype]:checked").value; const skintone
-        // = document.querySelector("input[name=skintone]:checked").value; details(
-        // {skintype, skintone} )
+     
         details(detailReqeust)
             .then(response => {
                 this

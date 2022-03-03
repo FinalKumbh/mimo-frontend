@@ -5,22 +5,13 @@ import "./Home.css";
 import "./Main.css";
 
 import {FooterNav} from './nav/FooterNav';
-import { HeaderNav } from './nav/HeaderNav';
+
 
 function Main() {
-  let [아이탬제목, 아이탬변경] = useState([
-    "lip price",
-    "lip price",
-    "lip price"
-  ]);
-  let [아이탬, 아이탬보기] = useState(0);
-  let posts = "item name";
-  //const navigate = useNavigate(); 
+ 
   return (
     <div className="App">
-      <HeaderNav/>
 
-         
           <div>
           <img id="event1" className='main_event1' src={`assets/image/event1.png` }/>
         

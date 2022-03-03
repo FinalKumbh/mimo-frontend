@@ -1,14 +1,5 @@
  import React, { Component } from 'react';
-import {
-  Router,
-  Route,
-  Switch,
-  useHistory
-} from 'react-router-dom';
-import { useMediaQuery } from "react-responsive"
-import Media from 'react-media';
-
-
+import {  Route,   Switch } from 'react-router-dom';
 import AppHeader from '../common/AppHeader';
 import Home from '../home/Home';
 import Login from '../user/login/Login';
@@ -16,35 +7,17 @@ import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
 import Main from '../home/Main';
 import Details from '../layout/details/Details';
-import Simulate from '../layout/simulate/Simulate';
-import ItemAdd from '../layout/item/ItemAdd';
+
 import Review from '../layout/review/Review';
 import Cart from '../layout/cart/Cart';
-
-import Modelhome from '../layout/modeling/components/Modelhome';
-import Upload from '../layout/modeling/components/Upload';
-
-
 import ItemApp from '../layout/item/ItemApp';
-
-
- import Product1 from '../layout/product/product1';
- import Product2 from '../layout/product/product2';
- import Product3 from '../layout/product/product3';
- import Product4 from '../layout/product/product4';
- import Product5 from '../layout/product/product5';
- import Product6 from '../layout/product/product6';
- import Product7 from '../layout/product/product7';
- import Product8 from '../layout/product/product8';
-
-
-
 import Modelhome from '../layout/modeling/components/Modelhome';
 import Upload from '../layout/modeling/components/Upload';
- 
+
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
+
 import LoadingIndicator from '../common/LoadingIndicator';
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
@@ -55,15 +28,7 @@ import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import './App.css';
 
 
-import Review2 from '../layout/review/Reviewcopy';
-
-
-import PublicRoute from '../common/PublicRoute.js'
-
 class App extends Component {
-
- 
-
   constructor(props) {
     super(props);
     this.state = {
@@ -71,24 +36,16 @@ class App extends Component {
       currentUser: null,
       loading: false
     }
-    const MEDIA_QUERIES = {
-      mobile: '(max-width:800px',
-    }
 
-    const Mobilemode = (props, context) => (
-      <div id="middle" className='styles.middleback'>
-        
-      </div>
-    )
     this.loadCurrentlyLoggedInUser = this.loadCurrentlyLoggedInUser.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
   
 
   loadCurrentlyLoggedInUser() {
-    getCurrentUser()                //현재 사용자 정보 받는 곳인가?
+    getCurrentUser()                
     .then(response => {
-      this.setState({               //현재 사용자 응답받고, 인증 true, loading은 뭐지?
+      this.setState({               
         currentUser: response,
         authenticated: true,
         loading: false
@@ -102,17 +59,14 @@ class App extends Component {
     });    
   }
 
-  handleLogout() {                            //로그아웃. 
-    localStorage.removeItem(ACCESS_TOKEN);    //access token, 인증, 현재 사용자 없앰
+  handleLogout() {                            
+    localStorage.removeItem(ACCESS_TOKEN);    
     this.setState({
       authenticated: false,                   
       currentUser: null 
     });
     Alert.success("You're safely logged out!");
-  //   this.props.history.replace({
-  //     pathname: this.props.location.pathname,
-  //     state: {}
-  // });
+
 
   }
 
@@ -128,7 +82,7 @@ class App extends Component {
       
     }
 
-    return (                              //각 api uri에 보낼 파라미터들
+    return (                              
       <div className="app" >
         <div className='center_app'>
             <div className="app-top-box">
@@ -136,142 +90,26 @@ class App extends Component {
           </div>
           <div className="app-body">
               <Switch> 
-            <Route exact path="/" component={(props)=> <Home {...props} authenticated={this.state.authenticated} currentUser={this.state.currentUser} ww/>}></Route>           
-              <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Profile}  ></PrivateRoute>
-              <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Main}></PrivateRoute>
-
-                
-                <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Details}></PrivateRoute>
-          
-              <PrivateRoute path="/simulate" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Simulate}></PrivateRoute>
-              <PrivateRoute path="/review" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Review}></PrivateRoute>
-
-              <PrivateRoute path="/review2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Review2}></PrivateRoute>
-                <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={ItemAdd}></PrivateRoute>
-                 <Route path="/itemapp"                 component={ItemApp}></Route>
-                {/* <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product}></PrivateRoute> */}
-                  <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Cart}></PrivateRoute>
-
-               <PrivateRoute path="/product1" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product1}></PrivateRoute>
-
-                <PrivateRoute path="/product2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product2}></PrivateRoute>
-
-                <PrivateRoute path="/product3" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product3}></PrivateRoute>
-
-                <PrivateRoute path="/product4" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product4}></PrivateRoute>
-
-                <PrivateRoute path="/product5" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product5}></PrivateRoute>
-
-              <PrivateRoute path="/product6" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product6}></PrivateRoute>
-
-              <PrivateRoute path="/product7" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product7}></PrivateRoute>
-
-              <PrivateRoute path="/product8" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Product8}></PrivateRoute>
-
-
-
-                
-              <Route path="/login"
-                render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
-          
-              <Route path="/signup"
-                render={(props) => <Signup authenticated={this.state.authenticated} {...props} />}></Route>
-              <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
-              <Route component={NotFound}></Route>
-
-              <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Modelhome}></PrivateRoute>
-              <PrivateRoute path="/Upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-                component={Upload}></PrivateRoute>
-         
-            <PrivateRoute path="/simulate" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Simulate}></PrivateRoute>
-             <PrivateRoute path="/review" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Review}></PrivateRoute>
-
-            <PrivateRoute path="/review2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Review2}></PrivateRoute>
-              <PrivateRoute path="/itemadd" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={ItemAdd}></PrivateRoute>
-             
- 
-
-<PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Modelhome}></PrivateRoute>
-             
-             <PrivateRoute path="/upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Upload}></PrivateRoute>
-             
-             
-
-
-{/* <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product}></PrivateRoute> */}
-
-
-               {/* <PrivateRoute path="/product1" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product1}></PrivateRoute>
-
-               <PrivateRoute path="/product2" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product2}></PrivateRoute>
-
-              <PrivateRoute path="/product3" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product3}></PrivateRoute>
-
-              <PrivateRoute path="/product4" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product4}></PrivateRoute>
-
-              <PrivateRoute path="/product5" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product5}></PrivateRoute>
-
-            <PrivateRoute path="/product6" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product6}></PrivateRoute>
-
-            <PrivateRoute path="/product7" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product7}></PrivateRoute>
-
-            <PrivateRoute path="/product8" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={Product8}></PrivateRoute> */}
-
-  <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
-              component={ItemApp}></PrivateRoute>
-
+               <Route exact path="/" component={(props)=> <Home {...props} authenticated={this.state.authenticated} currentUser={this.state.currentUser} ww/>}></Route>           
+                <PrivateRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}   component={Profile}  ></PrivateRoute>
               
-            <Route path="/login"
-              render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
-         
-            <Route path="/signup"
-              render={(props) => <Signup authenticated={this.state.authenticated} {...props} />}></Route>
-            <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
-            <Route component={NotFound}></Route>
-
-         
-
-
-            </Switch>
+                <PrivateRoute path="/main" authenticated={this.state.authenticated} currentUser={this.state.currentUser}   component={Main}></PrivateRoute>
+                <PrivateRoute path="/details" authenticated={this.state.authenticated} currentUser={this.state.currentUser}  component={Details}></PrivateRoute>
+                <PrivateRoute path="/review" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={Review}></PrivateRoute>
+                <PrivateRoute path="/itemapp" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={ItemApp}></PrivateRoute>
+                <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}  component={Cart}></PrivateRoute>
+                <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}   component={ItemApp}></PrivateRoute>
+            
+                <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={Modelhome}></PrivateRoute> 
+                <PrivateRoute path="/Upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}   component={Upload}></PrivateRoute>      
+       
+                <Route path="/login"  render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>      
+                <Route path="/signup"  render={(props) => <Signup authenticated={this.state.authenticated} {...props} />}></Route>
+                <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
+                <Route component={NotFound}></Route>
+             </Switch>
+          </div>
         </div>
-        <Alert stack={{limit: 3}}             //얜 뭐지?
-          timeout = {3000}
-          position='top-right' effect='slide' offset={65} />
-      </div>
-
       </div>
     );
   }

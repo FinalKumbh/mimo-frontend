@@ -6,6 +6,7 @@ import ItemList from './ItemList';
 function ItemApp(props) {
 
   const [items, setItems] = useState([]);
+  const [itemName, setItemName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [itemData, setItemData] = useState("");
@@ -21,9 +22,11 @@ function ItemApp(props) {
       }
       const data = await response.json();
       if(data.itemImgDtoList){
-        setItems(data.itemImgDtoList)
+        setItems(data.itemImgDtoList);
+        setItemName(data.itemName);
       }
       console.log(data);
+      console.log(data.itemName);
 
       if (typeof data.results.app === 'function'){
 
