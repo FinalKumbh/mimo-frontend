@@ -14,7 +14,7 @@ class Profile extends Component {
             <div className="profile-container">
                 <div className="container">
                     <div className="profile-info">
-                    <div class="third-nav" >
+                    <div className="third-nav" >
                         <div className='profileimg'>
                             <div className="profile-avatar">
                         

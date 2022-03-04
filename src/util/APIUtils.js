@@ -67,23 +67,9 @@ export function details() {
         console.log(res);
 
     });
-
-
-    
-    //아래 부분은 기존소스용으로 참고 axios 익숙해지고 백엔드랑 통신이 완벽하게 될경우 삭제
-    // return request({
-    //     url: API_BASE_URL + "/user/details/update",
-    //     method: 'PUT',
-    //     body: JSON.stringify(detailsRequest)
-    // });
 }
 
-export function home2() {
-    return request({
-        url: API_BASE_URL + "/home2",
-        method: 'GET'
-    });
-}
+
 
 
 export function cart() {
@@ -102,34 +88,6 @@ export function setItem({email,item_id, itemType, itemTone}) {
         .post(API_BASE_URL + `/item/${item_id}` , {
             itemType,
             itemTone,
-            item_id
-        })
-}
-
-// export function product(item_id) {
-//     return axios.get( API_BASE_URL + `/item/${item_id}`  ).then( res => {
-//         console.log(res);
-
-//     });
-// }
-export function setItemType({ item_id, itemType}) {
-    if(!localStorage.getItem(ACCESS_TOKEN)) {
-        return Promise.reject("No access token set.");
-    }
-    return axios
-        .post(API_BASE_URL + `/item/${item_id}` , {
-            itemType,
-            item_id
-        })
-}
-
-export function setItemTitle({email,item_id, itemTitle}) {
-    if(!localStorage.getItem(ACCESS_TOKEN)) {
-        return Promise.reject("No access token set.");
-    }
-    return axios
-        .post(API_BASE_URL + `/item/${item_id}` , {
-            itemTitle,
             item_id
         })
 }

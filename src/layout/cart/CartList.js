@@ -3,13 +3,13 @@ import React from 'react';
 import Item from './Item';
 import classes from './ItemList.module.css';
 
-const ItemList = (props) => {
+const CartList = (props) => {
   return (
     <ul className={classes['items-list']}>
-      {props.items.map((items) => (
+      {props.carts.map((carts) => (
         <Item
-          key={items}
-          id={items.id}
+          key={carts}
+          id={carts.id}
  
          />
          
@@ -20,4 +20,4 @@ const ItemList = (props) => {
   );
 };
 
-export default ItemList;
+export default  CartList;

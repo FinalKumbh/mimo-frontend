@@ -27,7 +27,7 @@ function Details(props) {
         : [...skinType, type]
       )
     }
-    
+    console.log(skinType)
 
     const getClassskinTone = type =>{
         return skinTone.includes(type) ? 'checked' : '';

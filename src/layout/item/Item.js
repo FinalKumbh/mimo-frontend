@@ -2,7 +2,7 @@ import React from 'react';
 import {  Redirect , NavLink} from "react-router-dom";
 import classes from './Item.module.css';
 
-const Item = (props, itemName) => {
+const Item = (items) => {
 
   return (
     <li className={classes.item}>
@@ -10,31 +10,28 @@ const Item = (props, itemName) => {
   
       <div className="product">
     
-    <div className='productNav'> 
+      <div className='productNav'> 
     <div className='producthead'>
-      <img className="product_prod" src={process.env.PUBLIC_URL+`assets/image/velvettint.jpeg`  }/>
+    
+{/*    
+    <img className="product_prod" src={ imgUrl}  }/>
+      <img className="product_prod" src={process.env.PUBLIC_URL+`assets/image/velvettint.jpeg`  }/> */}
     </div>
       <div className='prod_title'>
         <p>롬앤</p>  
-        <img src={props.imgName}/>
-
-        <img src={props.imgUrl}/>
-  
-        <p className='itemTitle'>{itemName.itemName}롬앤 제로 벨벳 틴트 #오리지널시리즈</p>
+        <p className='itemTitle'>{items.itemId}{items.itemName}</p>
+        
+        <p className='itemTitle'>{items.itemName}</p>
         <p >판매가 </p>
-     
-       
+
+        <p>판매상태 :  {items.itemSellStatus}</p>
+        <p className='itemPrice'>{items.price}원</p>
       </div>
       <div className='payimg'>
       <NavLink to="/cart">  <img className="basket" src={process.env.PUBLIC_URL+`assets/image/basket.png` }/></NavLink>
       </div>
  
   </div>
-  <p className="productintroduce">상품소개</p>
-  <div className='productbody'>
-  <img className='productbodyimg' src={process.env.PUBLIC_URL+`assets/image/ZERO_VELVET_TINT_04_shop1_193337.jpeg` }/>
-  </div> 
-
  
 
 
