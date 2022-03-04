@@ -8,7 +8,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 function ItemApp(props) {
-
+  const [imgSrc, setImgSrc] = React.useState(null);
   const [items, setItems] = useState([]);
   const [itemName, setItemName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -20,14 +20,14 @@ function ItemApp(props) {
     setError(null);
     try{
       // const response = JSON.parse(tmpData)
-      const response =  await fetch('http://localhost:8080/item/${item_id}')
+      const response =  await fetch('http://localhost:8080/item/309')
       if (!response.ok){
         throw new Error('Something went wrong!');
       }
       const data = await response.json();
       if(data){
         setItems(data);
-    
+        setImgSrc(data);
       }
       console.log(data);
     
@@ -42,15 +42,8 @@ function ItemApp(props) {
         };
       });
 
-      const [ItemData, setItemData] = useState("");
-      useEffect(()=>{
-        ItemList(data).then(res => {
-          setItemData(res.data);
-        });
-      },[]);
 
-
-
+    console.log(setImgSrc);
 
       setItems(transformedItems);
  
@@ -95,7 +88,9 @@ function ItemApp(props) {
         <p >판매가 </p>
         <p className='itemPrice'>{items.price}원</p>
         <p>판매상태 :  {items.itemSellStatus}</p>
-    
+        {/* <img
+            src={imgSrc}
+          /> */}
         {/* <img src={} /> */}
       </div>
       <div className='payimg'>

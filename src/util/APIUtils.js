@@ -29,7 +29,7 @@ export function setSkin({email, skinType, skinTone}) {
         return Promise.reject("No access token set.");
     }
     return axios
-        .post(API_BASE_URL + `/user/update/skin/${email}`, {
+        .post(API_BASE_URL + `/user/skin/${email}`, {
             skinType,
             skinTone
         })
