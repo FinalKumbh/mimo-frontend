@@ -4,7 +4,10 @@ import ReviewEditor from "./ReviewEditor";
 import ReviewList from "./ReviewList";
 
 import {HeaderNav} from "../nav/HeaderNav";
-import { FooterNav } from "../nav/FooterNav";
+import { FooterNav } from '../../home/nav/FooterNav';
+
+import "../../home/Home.css";
+import "../../home/Main.css";
 
 const Review = () => {
   const [data, setData] = useState([]);

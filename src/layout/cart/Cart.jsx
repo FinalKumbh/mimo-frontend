@@ -4,7 +4,7 @@ import {Redirect,  NavLink } from "react-router-dom";
 import {cart} from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 import {BUY} from '../../constants';
-import { FooterNav } from '../../layout/nav/FooterNav';
+import { FooterNav } from '../../home/nav/FooterNav';
 import { HeaderNav } from '../nav/HeaderNav';
 
 

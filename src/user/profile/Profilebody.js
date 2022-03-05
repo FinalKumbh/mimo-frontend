@@ -2,8 +2,7 @@ import React from 'react'
 import {NavLink, Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom' 
 import { REVIEW , HOME , MYPAGE, CAMERA} from '../../constants';
-import { FooterNav } from '../../layout/nav/FooterNav';
- 
+import { FooterNav } from '../../home/nav/FooterNav';
 
 
 export  function Profilebody() {
@@ -25,7 +24,10 @@ export  function Profilebody() {
           
         </div>
         <footer>
-            <FooterNav/>
+        <div class="sixth-nav">
+        
+        <FooterNav/>
+      </div>
         </footer>
                          
 
