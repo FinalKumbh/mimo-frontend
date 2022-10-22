@@ -9,6 +9,10 @@ import { Link, NavLink } from 'react-router-dom';
 
 function ItemApp(props) {
   const [imgSrc, setImgSrc] = React.useState(null);
+
+  const search = props.location;
+  console.log(search);
+
   const [items, setItems] = useState([]);
   const [itemName, setItemName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +24,7 @@ function ItemApp(props) {
     setError(null);
     try{
       // const response = JSON.parse(tmpData)
-      const response =  await fetch('http://localhost:8080/item/309')
+      const response =  await fetch('http://localhost:8080/item/${item_id}')
       if (!response.ok){
         throw new Error('Something went wrong!');
       }
@@ -41,6 +45,13 @@ function ItemApp(props) {
   
         };
       });
+
+      const [ItemData, setItemData] = useState("");
+      useEffect(()=>{
+        ItemList(data).then(res => {
+          setItemData(res.data);
+        });
+      },[]);
 
 
     console.log(setImgSrc);

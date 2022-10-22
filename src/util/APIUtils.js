@@ -35,6 +35,16 @@ export function setSkin({email, skinType, skinTone}) {
         })
 }
 
+export function getItemById({itemId}){
+    return axios
+        .get(API_BASE_URL + `/item/${itemId}`)
+}
+
+export function getItems(){
+    return axios
+        .get(API_BASE_URL + "/item/view")
+}
+
 export function getCurrentUser() {
     if(!localStorage.getItem(ACCESS_TOKEN)) {
         return Promise.reject("No access token set.");

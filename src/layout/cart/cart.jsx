@@ -3,7 +3,7 @@ import React, {Component, useEffect, useState} from 'react';
 import {Redirect,  NavLink } from "react-router-dom";
 
 import {BUY} from '../../constants';
-import { FooterNav } from '../../layout/nav/FooterNav';
+import { FooterNav } from '../nav/FooterNav';
 import { HeaderNav } from '../nav/HeaderNav';
 
 

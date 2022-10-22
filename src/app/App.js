@@ -13,13 +13,13 @@ import Cart from '../layout/cart/Cart';
 import ItemApp from '../layout/item/ItemApp';
 import Modelhome from '../layout/modeling/components/Modelhome';
 import Upload from '../layout/modeling/components/Upload';
-
+import ItemTest from '../layout/item/ItemTest';
 
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
 
 import LoadingIndicator from '../common/LoadingIndicator';
-import { getCurrentUser } from '../util/APIUtils';
+import { getCurrentUser, getItems } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
 import PrivateRoute from '../common/PrivateRoute';
 import Alert from 'react-s-alert';
@@ -34,7 +34,8 @@ class App extends Component {
     this.state = {
       authenticated: false,
       currentUser: null,
-      loading: false
+      loading: false,
+      itemList: null
     }
 
     this.loadCurrentlyLoggedInUser = this.loadCurrentlyLoggedInUser.bind(this);
@@ -43,6 +44,7 @@ class App extends Component {
   
 
   loadCurrentlyLoggedInUser() {
+
     getCurrentUser()                
     .then(response => {
       this.setState({               
@@ -99,7 +101,7 @@ class App extends Component {
                 <PrivateRoute path="/itemapp" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={ItemApp}></PrivateRoute>
                 <PrivateRoute path="/cart" authenticated={this.state.authenticated} currentUser={this.state.currentUser}  component={Cart}></PrivateRoute>
                 <PrivateRoute path="/product" authenticated={this.state.authenticated} currentUser={this.state.currentUser}   component={ItemApp}></PrivateRoute>
-            
+                <Route path="/itemtest" authenticated={this.state.authenticated} currentUser={this.state.currentUser} itemList={this.state.itemList} component={ItemTest}></Route>
                 <PrivateRoute path="/modelhome" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={Modelhome}></PrivateRoute> 
                 <PrivateRoute path="/Upload" authenticated={this.state.authenticated} currentUser={this.state.currentUser}   component={Upload}></PrivateRoute>      
        
